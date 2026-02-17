@@ -17,11 +17,15 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SU
 
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
-// Map tokens to ChangeNow.io currency codes (SOL network only)
-const TOKEN_TO_CHANGENOW: Record<string, string> = {
-  'USDC': 'usdcsol',
-  'USDT': 'usdtsol',
-};
+// Map tokens to ChangeNow.io currency codes - chain-aware
+import { getChangeNowCurrencies } from '../lib/chain-config.js';
+
+function getTokenToChangeNow(): Record<string, string> {
+  return getChangeNowCurrencies() as Record<string, string>;
+}
+
+// Legacy alias for backward compatibility
+const TOKEN_TO_CHANGENOW = getTokenToChangeNow();
 
 const ALLOWED_ORIGINS = [
   "https://void402.com",
