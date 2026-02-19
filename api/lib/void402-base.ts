@@ -126,6 +126,30 @@ export const X402_PRIVACY_POOL_ABI = [
   'event ExternalTransfer(bytes32 indexed proofId, address indexed recipient, uint256 amount)',
 ];
 
+// DepositRouter ABI
+export const DEPOSIT_ROUTER_ABI = [
+  'function depositWithGas(address holdingWallet, uint256 amount) external payable',
+  'function usdc() view returns (address)',
+  'function collectionWallet() view returns (address)',
+  'event DepositWithGas(address indexed user, address indexed holdingWallet, uint256 usdcAmount, uint256 ethAmount)',
+];
+
+// Get DepositRouter contract address
+export function getDepositRouterAddress(): string {
+  const address = process.env.DEPOSIT_ROUTER_ADDRESS;
+  if (!address) {
+    throw new Error('DEPOSIT_ROUTER_ADDRESS not configured');
+  }
+  return address;
+}
+
+// Get DepositRouter contract instance
+export function getDepositRouterContract(signerOrProvider?: ethers.Signer | ethers.Provider): ethers.Contract {
+  const address = getDepositRouterAddress();
+  const providerOrSigner = signerOrProvider || getBaseProvider();
+  return new ethers.Contract(address, DEPOSIT_ROUTER_ABI, providerOrSigner);
+}
+
 // Get X402PrivacyPool contract instance
 export function getPrivacyPoolContract(signerOrProvider?: ethers.Signer | ethers.Provider): ethers.Contract {
   const address = getContractAddress();
