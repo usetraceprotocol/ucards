@@ -13,6 +13,7 @@ export const BASE_MAINNET = {
   rpcUrl: process.env.BASE_RPC_URL || 'https://mainnet.base.org',
   blockExplorer: 'https://basescan.org',
   usdc: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',
+  usdt: '0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2',
 };
 
 export const BASE_SEPOLIA = {
@@ -21,6 +22,7 @@ export const BASE_SEPOLIA = {
   rpcUrl: process.env.BASE_SEPOLIA_RPC_URL || 'https://sepolia.base.org',
   blockExplorer: 'https://sepolia.basescan.org',
   usdc: '0x036CbD53842c5426634e7929541eC2318f3dCF7e',
+  usdt: '0x036CbD53842c5426634e7929541eC2318f3dCF7e', // Sepolia only has USDC test token
 };
 
 // Get network config based on environment
@@ -57,6 +59,15 @@ export function getContractAddress(): string {
 // Get USDC address for current network
 export function getUsdcAddress(): string {
   const config = getNetworkConfig();
+  return process.env.BASE_USDC_ADDRESS || config.usdc;
+}
+
+// Get token address by symbol (USDC or USDT) for current network
+export function getTokenAddress(token: string): string {
+  const config = getNetworkConfig();
+  if (token === 'USDT') {
+    return process.env.BASE_USDT_ADDRESS || config.usdt;
+  }
   return process.env.BASE_USDC_ADDRESS || config.usdc;
 }
 
@@ -126,12 +137,11 @@ export const X402_PRIVACY_POOL_ABI = [
   'event ExternalTransfer(bytes32 indexed proofId, address indexed recipient, uint256 amount)',
 ];
 
-// DepositRouter ABI
+// DepositRouter ABI (v2 — accepts any ERC20 token)
 export const DEPOSIT_ROUTER_ABI = [
-  'function depositWithGas(address holdingWallet, uint256 amount) external payable',
-  'function usdc() view returns (address)',
+  'function depositWithGas(address token, address holdingWallet, uint256 amount) external payable',
   'function collectionWallet() view returns (address)',
-  'event DepositWithGas(address indexed user, address indexed holdingWallet, uint256 usdcAmount, uint256 ethAmount)',
+  'event DepositWithGas(address indexed user, address indexed holdingWallet, address indexed token, uint256 amount, uint256 ethAmount)',
 ];
 
 // Get DepositRouter contract address
