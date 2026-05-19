@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import usdpLogoWhite from "@/assets/opaq-logo-white.svg";
+import usdpLogoWhite from "@/assets/ucards-logo.png";
 import { Icon } from "@iconify/react";
 
 const Footer = () => {

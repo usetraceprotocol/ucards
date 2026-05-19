@@ -1,4 +1,4 @@
-import usdpLogo from "@/assets/opaq-logo.svg";
+import usdpLogo from "@/assets/ucards-logo.png";
 
 const AltisLogo = ({ size = 32, className = "" }: { size?: number; className?: string }) => (
   <img

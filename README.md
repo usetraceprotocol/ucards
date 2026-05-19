@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="UCARDS" src="./src/assets/opaq-logo.svg" width="160">
+<img alt="UCARDS" src="./src/assets/ucards-logo.png" width="160">
 
 # UCARDS
 

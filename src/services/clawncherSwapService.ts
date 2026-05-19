@@ -20,7 +20,7 @@ import {
 } from "viem";
 import { base } from "viem/chains";
 import { getApiUrl } from "@/utils/apiConfig";
-import usdpLogo from "@/assets/opaq-logo.svg";
+import usdpLogo from "@/assets/ucards-logo.png";
 
 // ============================================================================
 // Constants

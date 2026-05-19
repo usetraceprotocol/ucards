@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
-import usdpLogo from "@/assets/opaq-logo.svg";
-import usdpLogoWhite from "@/assets/opaq-logo-white.svg";
+import usdpLogo from "@/assets/ucards-logo.png";
+import usdpLogoWhite from "@/assets/ucards-logo.png";
 import { useTheme } from "@/contexts/ThemeContext";
 import {
   Shield, Lock, Fingerprint, Eye, KeyRound, FileKey,
