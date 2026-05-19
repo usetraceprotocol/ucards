@@ -245,7 +245,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
       const displayRecipient = recipientType === "username"
         ? `@${usernameInput.startsWith("@") ? usernameInput.substring(1) : usernameInput}`
         : recipient;
-      const message = `Authorize UCARD transfer:\nAmount: ${amount} USDC\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
+      const message = `Authorize card top-up:\nAmount: ${amount} USDC\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
 
       let walletSignature: string;
       try {
@@ -718,7 +718,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
                       </p>
                     </div>
 
-                    {/* Privacy Level */}
+                    {/* Card Mode */}
                     <PrivacyLevelSelector onChange={setSelectedPrivacy} />
 
                     {/* Schedule mode */}
@@ -809,7 +809,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
                               <p className="text-sm font-medium">Execute automatically</p>
                               <p className="text-xs text-muted-foreground mt-0.5">
                                 {scheduleMode === "recurring"
-                                  ? "Sign one authorization now. Each scheduled payment fires from your pool balance with no further signing. Authorization expires in 1 year and can be revoked anytime by cancelling the schedule."
+                                  ? "Sign one authorization now. Each scheduled top-up fires from your pool balance with no further signing. Authorization expires in 1 year and can be revoked anytime by cancelling the schedule."
                                   : "Sign one authorization now. The payment fires automatically at the scheduled time — no banner, no further signing. Cancel the schedule before then to revoke."}
                               </p>
                             </div>
@@ -921,7 +921,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
                         </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-muted-foreground">Privacy Level</span>
+                        <span className="text-muted-foreground">Card Mode</span>
                         <span className="capitalize">{selectedPrivacy}</span>
                       </div>
                       <div className="flex justify-between">

@@ -20,7 +20,7 @@ const YieldEngine = ({ showBalance }: YieldEngineProps) => {
           <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
             <Zap className="w-5 h-5 text-primary" />
           </div>
-          <span className="font-display font-bold">Yield Engine</span>
+          <span className="font-display font-bold">Card Booster Engine</span>
         </div>
         <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
           <span className="text-xs font-semibold text-primary">STABLE</span>

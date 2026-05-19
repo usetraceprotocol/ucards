@@ -362,7 +362,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Icon icon="ph:shield-check-bold" className="w-4 h-4 text-sky-400" />
-                <span className="text-sm" style={{ color: 'var(--dash-text-muted)' }}>Encrypted Balance</span>
+                <span className="text-sm" style={{ color: 'var(--dash-text-muted)' }}>Card Balance</span>
               </div>
               <div className="flex items-baseline gap-3">
                 <span className="text-3xl font-semibold tracking-tight">
@@ -502,7 +502,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
             style={{ border: '1px solid var(--dash-border)', background: 'var(--dash-surface)' }}
           >
             <div className="flex items-center justify-between mb-3">
-              <div className="text-sm font-medium" style={{ color: 'var(--dash-text)' }}>Privacy Level</div>
+              <div className="text-sm font-medium" style={{ color: 'var(--dash-text)' }}>Card Mode</div>
             </div>
             <PrivacyLevelSelector compact onNavigateToSettings={() => setActiveTab("settings")} />
           </motion.div>

@@ -123,7 +123,7 @@ const YieldVaultsSection = ({ showBalance }: YieldVaultsSectionProps) => {
         >
           <div className="flex items-center gap-2 mb-2">
             <Icon icon="ph:shield-check-bold" className="w-4 h-4 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground uppercase tracking-wider">Privacy Level</span>
+            <span className="text-xs text-muted-foreground uppercase tracking-wider">Card Mode</span>
           </div>
           <p className="text-2xl font-display font-bold">100%</p>
         </motion.div>

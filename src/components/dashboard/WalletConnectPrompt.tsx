@@ -57,12 +57,12 @@ const WalletConnectPrompt = () => {
                 </div>
 
                 <h2 className="font-display text-3xl font-bold mb-4 text-foreground">
-                  Connect Your Wallet
+                  Connect to Mint
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Connect your wallet to access the UCARD Terminal.
-                  Experience encrypted balances, confidential payments, and privacy-first
-                  financial tools.
+                  Connect the wallet that holds your UNICARD membership NFT.
+                  Generate virtual cards, top up with USDC, and spend anywhere
+                  Visa or Mastercard is accepted.
                 </p>
 
                 <Button

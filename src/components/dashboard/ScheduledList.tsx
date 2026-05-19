@@ -77,7 +77,7 @@ const ScheduledList = () => {
           <div className="rounded-2xl border border-border bg-card p-8 text-center">
             <Icon icon="ph:calendar-blank-bold" className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
             <p className="text-sm text-muted-foreground">
-              No scheduled payments. Use the Send tab and toggle "Schedule" or "Recurring."
+              No scheduled top-ups. Use the Send tab and toggle "Schedule" or "Recurring."
             </p>
           </div>
         ) : (

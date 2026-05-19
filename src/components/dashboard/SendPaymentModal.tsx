@@ -56,7 +56,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
   const [currentUsername, setCurrentUsername] = useState<string | null>(null);
   const [tokenBalances, setTokenBalances] = useState<{ usdc: number; usdt: number }>({ usdc: 0, usdt: 0 });
 
-  // Pre-fill from AI Terminal or external caller
+  // Pre-fill from Card AI Concierge or external caller
   useEffect(() => {
     if (open) {
       if (initialRecipient) {
@@ -312,7 +312,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
       // Create message to sign
       const effectiveRecipient = getEffectiveRecipient();
       const displayRecipient = recipientType === "username" ? `@${usernameInput}` : effectiveRecipient;
-      const message = `Authorize UCARD transfer:\nAmount: ${amount} ${selectedToken}\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
+      const message = `Authorize card top-up:\nAmount: ${amount} ${selectedToken}\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
       
       // Sign message with wallet (chain-aware)
       let walletSignature: string;
@@ -661,7 +661,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
                 </p>
               </div>
 
-              {/* Privacy Level */}
+              {/* Card Mode */}
               <PrivacyLevelSelector onChange={setSelectedPrivacy} />
 
               {/* Error Message */}
@@ -723,7 +723,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Privacy Level</span>
+                  <span className="text-muted-foreground">Card Mode</span>
                   <span className="capitalize">{selectedPrivacy}</span>
                 </div>
                 <div className="flex justify-between">

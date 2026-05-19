@@ -100,7 +100,7 @@ const PrivacyLevelSelector = ({ compact = false, onChange, onNavigateToSettings 
     <>
       <div className="space-y-2">
         <label className="text-xs text-muted-foreground uppercase tracking-wider block">
-          Privacy Level
+          Card Mode
         </label>
         <div className="grid grid-cols-3 gap-2">
           {levels.map((level) => (
@@ -144,7 +144,7 @@ const PrivacyLevelSelector = ({ compact = false, onChange, onNavigateToSettings 
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <AlertCircle className="w-5 h-5 text-primary" />
-              Change Privacy Level
+              Change Card Mode
             </DialogTitle>
             <DialogDescription>
               {pendingLevel && (

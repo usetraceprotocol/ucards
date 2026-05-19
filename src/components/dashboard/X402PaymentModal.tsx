@@ -37,7 +37,7 @@ const X402PaymentModal = ({ open, onOpenChange, initialAmount }: X402PaymentModa
   const [serviceName, setServiceName] = useState("");
   const [amount, setAmount] = useState("");
 
-  // Pre-fill from AI Terminal
+  // Pre-fill from Card AI Concierge
   useEffect(() => {
     if (open && initialAmount) {
       setAmount(initialAmount);

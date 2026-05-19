@@ -45,7 +45,7 @@ const DashboardLeftSidebar = ({ activeTab, setActiveTab, showBalance, unreadMess
     disabled?: boolean;
   }[] = [
     { id: "overview", label: "Dashboard", icon: LayoutDashboard },
-    { id: "terminal", label: "AI Terminal", icon: Terminal },
+    { id: "terminal", label: "Card AI Concierge", icon: Terminal },
     { id: "agents", label: "Agents", icon: Bot },
     { id: "payments", label: "Payments", icon: Send },
     { id: "withdraw", label: "Withdraw", icon: ArrowUpRight },
@@ -142,7 +142,7 @@ const DashboardLeftSidebar = ({ activeTab, setActiveTab, showBalance, unreadMess
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs" style={{ color: 'var(--dash-text-muted)' }}>Privacy Level</span>
+            <span className="text-xs" style={{ color: 'var(--dash-text-muted)' }}>Card Mode</span>
             <span className={cn(
               "text-xs font-semibold capitalize",
               privacyLevel === "full" ? "text-emerald-400" :

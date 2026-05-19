@@ -123,7 +123,7 @@ const EncryptedBalanceCard = ({ showBalance, onToggleBalance }: EncryptedBalance
             <div className="flex items-center gap-2 mb-2">
               <Shield className="w-5 h-5 text-primary" />
               <span className="text-xs text-muted-foreground uppercase tracking-wider">
-                Encrypted Balance
+                Card Balance
               </span>
             </div>
             <div className={cn("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium", badge.color)}>

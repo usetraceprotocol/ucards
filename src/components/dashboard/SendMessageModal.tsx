@@ -156,7 +156,7 @@ const SendMessageModal = ({ open, onOpenChange, onMessageSent, defaultRecipient 
         <DialogHeader>
           <DialogTitle className="text-foreground">Send Message</DialogTitle>
           <DialogDescription className="text-white/50">
-            Send an encrypted message to another UCARD user
+            Send an cardholder note to another cardholder
           </DialogDescription>
         </DialogHeader>
 

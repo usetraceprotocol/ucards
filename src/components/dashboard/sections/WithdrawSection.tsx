@@ -24,7 +24,7 @@ const WithdrawSection = ({ showBalance, initialAmount, initialToken }: WithdrawS
   const [step, setStep] = useState<WithdrawStep>("form");
   const [amount, setAmount] = useState("");
 
-  // Pre-fill from AI Terminal
+  // Pre-fill from Card AI Concierge
   useEffect(() => {
     if (initialAmount) setAmount(initialAmount);
     if (initialToken) setToken(initialToken);

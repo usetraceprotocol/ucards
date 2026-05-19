@@ -64,7 +64,7 @@ const DepositModal = ({ open, onOpenChange, initialAmount, initialToken }: Depos
 
   const [amount, setAmount] = useState("");
 
-  // Pre-fill from AI Terminal
+  // Pre-fill from Card AI Concierge
   useEffect(() => {
     if (open) {
       if (initialAmount) setAmount(initialAmount);

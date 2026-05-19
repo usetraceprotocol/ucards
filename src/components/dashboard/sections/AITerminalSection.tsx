@@ -174,7 +174,7 @@ const AITerminalSection = ({ showBalance, setActiveTab, onWithdraw }: AITerminal
           </div>
           <div>
             <h2 className="text-sm font-semibold" style={{ color: "var(--dash-text)" }}>
-              AI Terminal
+              Card AI Concierge
             </h2>
             <p className="text-xs" style={{ color: "var(--dash-text-faint)" }}>
               Talk to AI in plain English
@@ -194,7 +194,7 @@ const AITerminalSection = ({ showBalance, setActiveTab, onWithdraw }: AITerminal
                 <Sparkles className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-base font-semibold mb-1" style={{ color: "var(--dash-text)" }}>
-                Welcome to AI Terminal
+                Welcome to Card AI Concierge
               </h3>
               <p className="text-xs mb-6 max-w-xs" style={{ color: "var(--dash-text-faint)" }}>
                 Your AI-powered assistant for managing payments, checking balances, and navigating UCARD.

@@ -13,66 +13,66 @@ const WhitepaperSection = () => {
       icon: "ph:cube-bold",
       label: "01",
       title: "Settlement",
-      body: "Base with native USDC and a small suite of audited Solidity contracts. No proprietary token, no rebasing wrapper.",
+      body: "Ethereum mainnet with native USDC and a small suite of audited Solidity contracts. ERC-20 $UCARD token, no rebasing wrapper.",
       color: "var(--beam-cyan)",
     },
     {
       icon: "ph:shield-check-bold",
       label: "02",
-      title: "Privacy",
-      body: "An encrypted token for confidential balances and a ZK shielded pool for unlinkable transfers. Three privacy levels per transaction.",
+      title: "Membership Gate",
+      body: "ERC-721 NFT minted once per qualifying wallet (≥ 100 $UCARD held). The NFT is the dashboard key — it unlocks virtual card issuance.",
       color: "var(--beam-violet)",
     },
     {
-      icon: "ph:graph-bold",
+      icon: "ph:credit-card-bold",
       label: "03",
-      title: "Channels",
-      body: "Direct, card-issuance, SMS, Farcaster, Twitter, and an AI Terminal, all five surfaces settle against the same pool with the same guarantees.",
+      title: "Card Issuance",
+      body: "Virtual card numbers (PAN/CVV/expiry) generated on demand inside the dashboard, backed by USDC balance. Spend anywhere Visa or Mastercard is accepted.",
       color: "var(--beam-green)",
     },
   ];
 
   const channels = [
-    { icon: "ph:wallet-bold", label: "Direct", desc: "Wallet or @username" },
-    { icon: "ph:globe-bold", label: "card-issuance", desc: "HTTP 402 for browsers and agents" },
-    { icon: "ph:device-mobile-bold", label: "SMS", desc: "Any phone, offline-capable" },
-    { icon: "ph:broadcast-bold", label: "Farcaster", desc: "Mini App + @unicard bot" },
-    { icon: "ph:chat-circle-bold", label: "Twitter / X", desc: "Tweet or DM the bot" },
+    { icon: "ph:credit-card-bold", label: "Generate", desc: "New card on demand" },
+    { icon: "ph:arrow-down-bold", label: "Reload", desc: "Top up with USDC any time" },
+    { icon: "ph:globe-bold", label: "Spend Online", desc: "Anywhere Visa/MC works" },
+    { icon: "ph:gear-bold", label: "Limits", desc: "Per-card spend cap & TTL" },
+    { icon: "ph:eye-slash-bold", label: "Burn", desc: "One-click revoke a card" },
   ];
 
   const privacyModes = [
     {
-      name: "Public",
+      name: "Single-use",
       number: "01",
-      amount: "Visible",
-      parties: "Visible",
-      desc: "Default ERC-20 transfer. Cheapest gas, no privacy.",
+      amount: "Capped",
+      parties: "Vendor-locked",
+      desc: "One charge, one merchant, then auto-burn. Best for sketchy checkouts.",
     },
     {
-      name: "Partial",
+      name: "Subscription",
       number: "02",
-      amount: "Hidden",
-      parties: "Visible",
-      desc: "B2B settlement, relationships are known, amounts are sensitive.",
+      amount: "Monthly cap",
+      parties: "Vendor-locked",
+      desc: "Recurring charges from a single merchant. Cancel by revoking the card.",
     },
     {
-      name: "Full",
+      name: "Unlimited",
       number: "03",
       amount: "Hidden",
-      parties: "Hidden",
-      desc: "Retail and agent payments. The entire transaction is unlinkable.",
+      parties: "Any",
+      desc: "Daily-funded virtual card for everyday spend. Burn and re-mint anytime.",
     },
   ];
 
   const chapters = [
-    "Privacy primitives, FHE & ZK proofs",
-    "The smart contract suite",
-    "card-issuance HTTP-native payments",
-    "SMS & offline payment layer",
-    "Autonomous agents & ERC-8004 identity",
-    "Security model and trust assumptions",
-    "Regulatory and compliance layer",
-    "Roadmap through V4",
+    "$UCARD token economics & supply",
+    "Membership NFT — mint flow & guards",
+    "USDC top-up & balance escrow",
+    "Virtual card issuance via licensed processor",
+    "Per-card spending limits & TTL",
+    "Card revocation & dispute flow",
+    "Custody, processor risk, and regulatory layer",
+    "Roadmap through V3 — physical card pilot",
   ];
 
   return (
@@ -143,8 +143,8 @@ const WhitepaperSection = () => {
               </a>
             </div>
             <p className="text-base text-muted-foreground leading-relaxed">
-              A digest of how UNICARD turns Base into a private settlement
-              layer for humans, cardholders, and the open web.
+              A digest of how UNICARD turns $UCARD holders into the
+              first onchain class of private virtual-card issuers on Ethereum.
             </p>
           </motion.div>
         </div>
@@ -162,21 +162,21 @@ const WhitepaperSection = () => {
           <p className="text-xl md:text-2xl font-serif text-foreground/90 leading-relaxed">
             UNICARD combines an{" "}
             <span className="text-foreground font-medium">
-              encrypted USDC token
+              ERC-20 $UCARD token
             </span>
             , a{" "}
             <span className="text-foreground font-medium">
-              private spending pool
+              one-shot ERC-721 membership NFT
             </span>
-            , an{" "}
-            <span className="text-foreground font-medium">card facilitator</span>
-            , and an{" "}
+            , a{" "}
+            <span className="text-foreground font-medium">USDC escrow vault</span>
+            , and a{" "}
             <span className="text-foreground font-medium">
-              ERC-8004 agent identity layer
+              licensed virtual-card processor
             </span>{" "}
-            into a single product that lets humans and cardholders move
-            USDC privately across wallets, phone numbers, social handles, and
-            HTTP endpoints, all settling on Ethereum.
+            into a single product that turns 100+ $UCARD holders into private
+            card issuers — spending stablecoins online without exposing the
+            wallet, all settling on Ethereum.
           </p>
         </motion.div>
 
@@ -232,7 +232,7 @@ const WhitepaperSection = () => {
         <div className="mb-24">
           <div className="flex items-center justify-between mb-8">
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
-              Five ways to address a recipient
+              Five things you can do with a virtual card
             </p>
             <span className="text-xs font-mono text-muted-foreground/50">
               §5 · Channels
@@ -269,7 +269,7 @@ const WhitepaperSection = () => {
         <div className="mb-24">
           <div className="flex items-center justify-between mb-8">
             <p className="text-xs uppercase tracking-widest text-muted-foreground">
-              Privacy in three modes
+              Three card modes
             </p>
             <span className="text-xs font-mono text-muted-foreground/50">
               §3 · Privacy
@@ -337,9 +337,9 @@ const WhitepaperSection = () => {
           style={{ borderColor: "hsl(var(--beam-green))" }}
         >
           <p className="text-xl md:text-2xl font-serif text-foreground italic leading-relaxed mb-3">
-            "Funds are always controlled by the smart contract. The relay is
-            a delivery mechanism, not a custodian. Every off-chain seam has a
-            permissionless escape hatch."
+            "The membership NFT is the gate. The USDC vault is the balance.
+            The virtual card is the surface. Burn any card, the next one is
+            one click away — the wallet behind it never moves."
           </p>
           <p className="text-xs uppercase tracking-widest text-muted-foreground">
             §12 Trust Model
