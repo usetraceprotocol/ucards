@@ -9,6 +9,7 @@ import { WalletProvider } from "@/contexts/WalletContext";
 import { XMTPProvider } from "@/contexts/XMTPContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { VeilProvider } from "@/contexts/VeilContext";
+import { Icon } from "@iconify/react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import WalletConnectButton from "@/components/WalletConnectButton";
 import Index from "./pages/Index";
@@ -75,7 +76,25 @@ function AppNav() {
     <FloatingNav
       navItems={navItems}
       rightElement={
-        <div className="pl-1">
+        <div className="flex items-center gap-1 pl-1">
+          <a
+            href="https://x.com/uCards_"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X / Twitter"
+            className="w-8 h-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+          >
+            <Icon icon="simple-icons:x" className="w-3.5 h-3.5" />
+          </a>
+          <a
+            href="https://t.me/useucards"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+            className="w-8 h-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors"
+          >
+            <Icon icon="simple-icons:telegram" className="w-4 h-4" />
+          </a>
           <WalletConnectButton variant="navbar" />
         </div>
       }
