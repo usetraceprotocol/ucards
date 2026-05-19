@@ -93,6 +93,26 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-1">
+            <a
+              href="https://x.com/uCards_"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X / Twitter"
+              className="w-9 h-9 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            >
+              <Icon icon="simple-icons:x" className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="https://t.me/useucards"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="w-9 h-9 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+            >
+              <Icon icon="simple-icons:telegram" className="w-4 h-4" />
+            </a>
+          </div>
           <WalletConnectButton variant="navbar" />
           <motion.button
             initial={{ opacity: 0, x: 20 }}
@@ -153,6 +173,26 @@ const Navbar = () => {
                   >
                     Launch Dashboard
                   </button>
+                  <div className="flex items-center justify-center gap-3 pt-3">
+                    <a
+                      href="https://x.com/uCards_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="X / Twitter"
+                      className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                    >
+                      <Icon icon="simple-icons:x" className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://t.me/useucards"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Telegram"
+                      className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+                    >
+                      <Icon icon="simple-icons:telegram" className="w-4 h-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
