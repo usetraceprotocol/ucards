@@ -24,12 +24,12 @@ export async function checkUCardsBalance(walletAddress: string): Promise<GateRes
   if (!TOKEN_ADDRESS || TOKEN_ADDRESS === "0x0000000000000000000000000000000000000000") {
     return {
       configured: false,
-      hasAccess: true,
-      balance: "0",
+      hasAccess: false,
+      balance: "—",
       required: MIN_BALANCE_RAW,
       symbol: "UCARD",
       tokenAddress: null,
-      reason: "Pre-launch demo — token not yet deployed, dashboard open to all connected wallets.",
+      reason: "$UCARD is not live yet. Membership opens at launch.",
     };
   }
 
