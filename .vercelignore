@@ -1,0 +1,8 @@
+api/
+packages/
+docs/
+_refs/
+*.py
+deploy*.js
+deploy*.sh
+fix-vercel-project.sh

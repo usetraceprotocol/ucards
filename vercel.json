@@ -2,43 +2,16 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "functions": {
-    "api/zk/process-pending-exchanges.ts": { "maxDuration": 300 },
-    "api/zk/process-split-queue.ts": { "maxDuration": 120 },
-    "api/zk/auto-split-and-exchange.ts": { "maxDuration": 120 },
-    "api/zk/withdraw.ts": { "maxDuration": 300 },
-    "api/zk/transfer.ts": { "maxDuration": 120 },
-    "api/farcaster/cast-payment.ts": { "maxDuration": 120 },
-    "api/farcaster/bot-cron.ts": { "maxDuration": 60 },
-    "api/ai/chat.ts": { "maxDuration": 30 },
-    "api/agents/agentkit-transfer.ts": { "maxDuration": 120 },
-    "api/agents/agentkit-wallet.ts": { "maxDuration": 30 },
-    "api/twitter/tweet-payment-cron.ts": { "maxDuration": 120 }
-  },
   "rewrites": [
     { "source": "/.well-known/farcaster.json", "destination": "/farcaster.json" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],
-  "crons": [
+  "headers": [
     {
-      "path": "/api/zk/process-pending-exchanges",
-      "schedule": "*/2 * * * *"
-    },
-    {
-      "path": "/api/x402/process-deposits",
-      "schedule": "*/2 * * * *"
-    },
-    {
-      "path": "/api/farcaster/bot-cron",
-      "schedule": "0 */6 * * *"
-    },
-    {
-      "path": "/api/twitter/tweet-payment-cron",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/scheduled-payments",
-      "schedule": "*/5 * * * *"
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ]
 }
