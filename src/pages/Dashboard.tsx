@@ -3,7 +3,7 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 
 const Dashboard = () => {
   return (
-    <ProtectedRoute requireAuth={true}>
+    <ProtectedRoute requireAuth={false}>
       <DashboardLayoutNew />
     </ProtectedRoute>
   );
