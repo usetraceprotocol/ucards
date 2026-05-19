@@ -508,7 +508,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
           </motion.div>
         </div>
 
-        {/* UNICARD Flywheel */}
+        {/* UCARDS Flywheel */}
         <FlywheelCard />
 
         {/* Onchain badges */}

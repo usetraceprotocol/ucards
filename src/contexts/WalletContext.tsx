@@ -25,7 +25,7 @@ const BASE_MAINNET_HEX = "0x2105";
 const BASE_SEPOLIA_HEX = "0x14a34";
 
 // Determine target chain based on environment
-const isProduction = typeof window !== "undefined" && (window.location.hostname === "unicard.com" || window.location.hostname === "www.unicard.com" || window.location.hostname.endsWith(".vercel.app"));
+const isProduction = typeof window !== "undefined" && (window.location.hostname === "ucards.com" || window.location.hostname === "www.ucards.com" || window.location.hostname.endsWith(".vercel.app"));
 const TARGET_CHAIN_ID = isProduction ? BASE_MAINNET_CHAIN_ID : BASE_SEPOLIA_CHAIN_ID;
 const TARGET_CHAIN_HEX = isProduction ? BASE_MAINNET_HEX : BASE_SEPOLIA_HEX;
 

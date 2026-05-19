@@ -225,7 +225,7 @@ class FarcasterApiClient {
   async resolveFarcasterUser(username: string) {
     return this.request<{
       found: boolean;
-      unicardUsername: string | null;
+      ucardsUsername: string | null;
       hasDeposited: boolean;
     }>(`/api/farcaster/resolve-fid?username=${encodeURIComponent(username)}`);
   }

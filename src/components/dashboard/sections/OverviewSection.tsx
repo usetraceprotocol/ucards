@@ -91,7 +91,7 @@ const OverviewSection = ({ showBalance, setShowBalance, setActiveTab }: Overview
       {/* Quick Actions */}
       <QuickActionsGrid onAction={handleQuickAction} />
 
-      {/* UNICARD Flywheel */}
+      {/* UCARDS Flywheel */}
       <FlywheelCard />
 
       {/* Recent Transactions */}

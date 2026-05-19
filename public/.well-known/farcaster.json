@@ -6,12 +6,12 @@
   },
   "miniapp": {
     "version": "0.0.0",
-    "name": "UNICARD Private Payments",
-    "homeUrl": "https://unicard.com/miniapp",
-    "iconUrl": "https://unicard.com/favicon.ico",
-    "splashImageUrl": "https://unicard.com/social-preview.png",
+    "name": "UCARDS Private Payments",
+    "homeUrl": "https://ucards.com/miniapp",
+    "iconUrl": "https://ucards.com/favicon.ico",
+    "splashImageUrl": "https://ucards.com/social-preview.png",
     "splashBackgroundColor": "#0a0a0a",
-    "webhookUrl": "https://unicard.com/api/farcaster/webhook",
+    "webhookUrl": "https://ucards.com/api/farcaster/webhook",
     "primaryCategory": "finance",
     "requiredChains": ["eip155:8453"]
   }

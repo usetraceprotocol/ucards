@@ -23,9 +23,9 @@ const Footer = () => {
   };
 
   const socialLinks: { name: string; href: string; icon: string; comingSoon?: boolean }[] = [
-     { name: "Twitter", href: "https://x.com/unicard", icon: "simple-icons:twitter" },
-     { name: "GitHub", href: "https://github.com/BaseUsdp/Unicard", icon: "simple-icons:github" },
-     { name: "Telegram", href: "https://t.me/unicard", icon: "simple-icons:telegram" },
+     { name: "Twitter", href: "https://x.com/ucards", icon: "simple-icons:twitter" },
+     { name: "GitHub", href: "https://github.com/BaseUsdp/uCards", icon: "simple-icons:github" },
+     { name: "Telegram", href: "https://t.me/ucards", icon: "simple-icons:telegram" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -111,7 +111,7 @@ const Footer = () => {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-8 pb-8 border-t border-background/10 pt-7 flex items-center justify-between">
-        <p className="text-xs text-background/30">© 2026 UNICARD. All rights reserved.</p>
+        <p className="text-xs text-background/30">© 2026 UCARDS. All rights reserved.</p>
         <p className="text-xs text-background/30">Designed with intent.</p>
       </div>
     </footer>

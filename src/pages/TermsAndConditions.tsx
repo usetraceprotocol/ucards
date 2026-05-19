@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
           <Link to="/" className="flex items-center gap-3">
             <AltisLogo size={28} className="text-foreground" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              UNICARD
+              UCARDS
             </span>
           </Link>
           <Link
@@ -36,7 +36,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-4">1. Agreement to Terms</h2>
             <p>
-              By accessing or using the UNICARD platform, website, and related services
+              By accessing or using the UCARDS platform, website, and related services
               (collectively, the "Service"), you agree to be bound by these Terms and Conditions
               ("Terms"). If you do not agree to these Terms, you must not access or use the
               Service.
@@ -61,7 +61,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-4">3. Description of Service</h2>
             <p>
-              UNICARD provides a privacy-focused payment layer for the membership economy.
+              UCARDS provides a privacy-focused payment layer for the membership economy.
               Our platform enables confidential transactions utilizing encrypted proof
               technology and the card-issuance payment protocol. The Service includes but is not
               limited to:
@@ -88,7 +88,7 @@ const TermsAndConditions = () => {
             </ul>
             <p className="mt-3">
               We will never ask for your private keys or seed phrases. If anyone claiming to
-              represent UNICARD requests such information, it is a scam.
+              represent UCARDS requests such information, it is a scam.
             </p>
           </section>
 
@@ -139,7 +139,7 @@ const TermsAndConditions = () => {
             <h2 className="text-xl font-semibold text-foreground mb-4">7. Intellectual Property</h2>
             <p>
               The Service and its original content, features, and functionality are owned by
-              UNICARD and are protected by international copyright, trademark, patent, trade
+              UCARDS and are protected by international copyright, trademark, patent, trade
               secret, and other intellectual property laws. You may not reproduce, distribute,
               modify, create derivative works of, publicly display, or otherwise exploit any
               content from the Service without our prior written consent.
@@ -165,7 +165,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-4">9. Limitation of Liability</h2>
             <p>
-              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, UNICARD AND ITS OFFICERS,
+              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, UCARDS AND ITS OFFICERS,
               DIRECTORS, EMPLOYEES, AGENTS, AND AFFILIATES SHALL NOT BE LIABLE FOR ANY
               INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING
               BUT NOT LIMITED TO:
@@ -182,7 +182,7 @@ const TermsAndConditions = () => {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-4">10. Indemnification</h2>
             <p>
-              You agree to indemnify, defend, and hold harmless UNICARD and its officers,
+              You agree to indemnify, defend, and hold harmless UCARDS and its officers,
               directors, employees, agents, and affiliates from and against any claims,
               liabilities, damages, losses, costs, and expenses (including reasonable
               attorney's fees) arising out of or in connection with your use of the Service,
@@ -229,11 +229,11 @@ const TermsAndConditions = () => {
               contact us at:
             </p>
              <div className="mt-4 p-6 bg-secondary border border-border rounded-lg">
-               <p className="font-medium text-foreground">UNICARD</p>
+               <p className="font-medium text-foreground">UCARDS</p>
                <p className="mt-2">
                  Twitter:{" "}
-                 <a href="https://x.com/unicard" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
-                   @Unicard
+                 <a href="https://x.com/ucards" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
+                   @uCards
                  </a>
                </p>
              </div>

@@ -165,7 +165,7 @@ const SettingsSection = () => {
   };
 
   const tipUrl = myHandle
-    ? `${typeof window !== "undefined" ? window.location.origin : "https://unicard.com"}/tip/@${myHandle}`
+    ? `${typeof window !== "undefined" ? window.location.origin : "https://ucards.com"}/tip/@${myHandle}`
     : null;
 
   const copyTipUrl = async () => {
@@ -363,7 +363,7 @@ const SettingsSection = () => {
           <div>
             <h3 className="font-display text-lg font-bold">Your tip page</h3>
             <p className="text-xs text-muted-foreground">
-              Public URL anyone can use to send you a tip on UNICARD
+              Public URL anyone can use to send you a tip on UCARDS
             </p>
           </div>
         </div>
@@ -398,7 +398,7 @@ const SettingsSection = () => {
           <div className="space-y-3">
             <p className="text-sm text-muted-foreground">
               You don't have a username yet. Pick one (3–20 chars) to unlock
-              your public tip page at <span className="font-mono">unicard.com/tip/@you</span>.
+              your public tip page at <span className="font-mono">ucards.com/tip/@you</span>.
             </p>
             <div className="flex items-stretch gap-2">
               <div className="flex flex-1 items-center gap-2 rounded-lg border border-border bg-background px-3">

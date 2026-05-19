@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
           <Link to="/" className="flex items-center gap-3">
             <AltisLogo size={28} className="text-foreground" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              UNICARD
+              UCARDS
             </span>
           </Link>
           <Link
@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold text-foreground mb-4">1. Introduction</h2>
             <p>
-              Welcome to UNICARD ("we," "our," or "us"). We are committed to protecting your
+              Welcome to UCARDS ("we," "our," or "us"). We are committed to protecting your
               privacy and ensuring the security of your personal information. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your information when you
               use our platform, website, and related services (collectively, the "Service").
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
               </li>
               <li>
                 <strong className="text-foreground/90">Protection of Rights:</strong> To protect the rights,
-                property, or safety of UNICARD, our users, or the public
+                property, or safety of UCARDS, our users, or the public
               </li>
               <li>
                 <strong className="text-foreground/90">Business Transfers:</strong> In connection with a
@@ -187,11 +187,11 @@ const PrivacyPolicy = () => {
               or our data practices, please contact us at:
             </p>
              <div className="mt-4 p-6 bg-secondary border border-border rounded-lg">
-               <p className="font-medium text-foreground">UNICARD</p>
+               <p className="font-medium text-foreground">UCARDS</p>
                <p className="mt-2">
                  Twitter:{" "}
-                 <a href="https://x.com/unicard" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
-                   @Unicard
+                 <a href="https://x.com/ucards" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
+                   @uCards
                  </a>
                </p>
              </div>

@@ -1,7 +1,7 @@
 /**
  * Farcaster Recipient Input
- * Input field with toggle: "UNICARD username" / "Farcaster user"
- * UNICARD mode: verifies username via /api/user/lookup (same as website)
+ * Input field with toggle: "UCARDS username" / "Farcaster user"
+ * UCARDS mode: verifies username via /api/user/lookup (same as website)
  * Farcaster mode: resolves via /api/farcaster/resolve-fid (privacy-safe)
  */
 
@@ -14,24 +14,24 @@ const API_BASE = getApiUrl();
 
 interface FarcasterRecipientInputProps {
   onRecipientResolved: (recipient: {
-    type: "unicard" | "farcaster";
+    type: "ucards" | "farcaster";
     username: string;
-    unicardUsername?: string;
+    ucardsUsername?: string;
     hasDeposited?: boolean;
   } | null) => void;
 }
 
-type InputMode = "unicard" | "farcaster";
+type InputMode = "ucards" | "farcaster";
 
 export function FarcasterRecipientInput({
   onRecipientResolved,
 }: FarcasterRecipientInputProps) {
-  const [mode, setMode] = useState<InputMode>("unicard");
+  const [mode, setMode] = useState<InputMode>("ucards");
   const [inputValue, setInputValue] = useState("");
   const [isResolving, setIsResolving] = useState(false);
   const [resolveResult, setResolveResult] = useState<{
     found: boolean;
-    unicardUsername?: string | null;
+    ucardsUsername?: string | null;
     hasDeposited?: boolean;
     walletHint?: string | null;
     error?: string;
@@ -54,8 +54,8 @@ export function FarcasterRecipientInput({
       setIsResolving(true);
 
       try {
-        if (mode === "unicard") {
-          // Verify UNICARD username via /api/user/lookup (same as website)
+        if (mode === "ucards") {
+          // Verify UCARDS username via /api/user/lookup (same as website)
           const response = await fetch(
             `${API_BASE}/api/user/lookup?username=${encodeURIComponent(username)}`
           );
@@ -68,7 +68,7 @@ export function FarcasterRecipientInput({
               walletHint: data.wallet_hint || null,
             });
             onRecipientResolved({
-              type: "unicard",
+              type: "ucards",
               username,
               hasDeposited: data.has_deposited !== false,
             });
@@ -80,7 +80,7 @@ export function FarcasterRecipientInput({
           const result = await farcasterApi.resolveFarcasterUser(username);
           setResolveResult({
             found: result.found,
-            unicardUsername: result.unicardUsername,
+            ucardsUsername: result.ucardsUsername,
             hasDeposited: result.hasDeposited,
           });
 
@@ -88,7 +88,7 @@ export function FarcasterRecipientInput({
             onRecipientResolved({
               type: "farcaster",
               username,
-              unicardUsername: result.unicardUsername || undefined,
+              ucardsUsername: result.ucardsUsername || undefined,
               hasDeposited: result.hasDeposited,
             });
           }
@@ -111,16 +111,16 @@ export function FarcasterRecipientInput({
       <div className="flex gap-1 p-0.5 bg-zinc-800 rounded-lg">
         <button
           onClick={() => {
-            setMode("unicard");
+            setMode("ucards");
             setInputValue("");
           }}
           className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors ${
-            mode === "unicard"
+            mode === "ucards"
               ? "bg-indigo-600 text-white"
               : "text-zinc-400 hover:text-zinc-300"
           }`}
         >
-          UNICARD Username
+          UCARDS Username
         </button>
         <button
           onClick={() => {
@@ -145,7 +145,7 @@ export function FarcasterRecipientInput({
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder={
-            mode === "unicard" ? "Enter UNICARD username" : "Enter Farcaster username"
+            mode === "ucards" ? "Enter UCARDS username" : "Enter Farcaster username"
           }
           className="w-full pl-9 pr-10 py-2.5 bg-zinc-800/50 border border-zinc-700/50 rounded-xl text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-indigo-500/50"
         />
@@ -174,14 +174,14 @@ export function FarcasterRecipientInput({
           }`}
         >
           {resolveResult.found
-            ? mode === "unicard"
+            ? mode === "ucards"
               ? resolveResult.hasDeposited === false
                 ? "User found but hasn't deposited yet"
                 : `User verified${resolveResult.walletHint ? ` (${resolveResult.walletHint})` : ""}`
-              : resolveResult.unicardUsername
-                ? `UNICARD user: ${resolveResult.unicardUsername} (${resolveResult.hasDeposited ? "has funds" : "no deposits yet"})`
-                : "Found on Farcaster (no UNICARD account yet)"
-            : resolveResult.error || (mode === "unicard" ? "Username not found" : "Farcaster user not found")}
+              : resolveResult.ucardsUsername
+                ? `UCARDS user: ${resolveResult.ucardsUsername} (${resolveResult.hasDeposited ? "has funds" : "no deposits yet"})`
+                : "Found on Farcaster (no UCARDS account yet)"
+            : resolveResult.error || (mode === "ucards" ? "Username not found" : "Farcaster user not found")}
         </div>
       )}
     </div>

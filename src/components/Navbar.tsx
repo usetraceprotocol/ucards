@@ -73,7 +73,7 @@ const Navbar = () => {
                }}
              />
            </motion.div>
-           <span className="text-sm font-semibold tracking-tighter text-foreground">UNICARD</span>
+           <span className="text-sm font-semibold tracking-tighter text-foreground">UCARDS</span>
          </Link>
 
         <div className="hidden md:flex items-center gap-9 text-sm text-muted-foreground font-normal">

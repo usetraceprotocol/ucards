@@ -297,7 +297,7 @@ const FeaturesSection = () => {
                       </div>
                       <div className="flex-1 flex justify-center">
                         <div className="px-3 py-0.5 rounded-md bg-secondary text-[10px] text-muted-foreground font-mono">
-                          unicard.app/dashboard
+                          ucards.app/dashboard
                         </div>
                       </div>
                     </div>

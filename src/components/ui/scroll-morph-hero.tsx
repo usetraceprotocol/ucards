@@ -515,7 +515,7 @@ export default function ScrollMorphHero() {
              >by Design</em>
           </h2>
            <p className="mt-6 text-sm leading-relaxed max-w-md text-center text-muted-foreground">
-             UNICARD is the membership-gated virtual card layer for Ethereum. Hold $UCARD, mint your card NFT, and spin up private virtual cards backed by stablecoins. Spend online without leaking your wallet — every checkout looks like a normal card payment.
+             UCARDS is the membership-gated virtual card layer for Ethereum. Hold $UCARD, mint your card NFT, and spin up private virtual cards backed by stablecoins. Spend online without leaking your wallet — every checkout looks like a normal card payment.
            </p>
            <div className="pointer-events-auto mt-8 relative group">
              <div

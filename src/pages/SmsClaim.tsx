@@ -129,7 +129,7 @@ const SmsClaim = () => {
           style={{ color: "var(--dash-text-faint)" }}
         >
           <Icon icon="ph:arrow-left-bold" className="h-3.5 w-3.5" />
-          UNICARD
+          UCARDS
         </Link>
 
         <div>
@@ -151,7 +151,7 @@ const SmsClaim = () => {
             style={{ color: "var(--dash-text-muted)" }}
           >
             Connect a wallet to receive these funds. Settlement runs through
-            the UNICARD privacy pool, so the recipient address arriving
+            the UCARDS privacy pool, so the recipient address arriving
             on-chain isn't directly linked to the sender's deposit.
           </p>
         </div>

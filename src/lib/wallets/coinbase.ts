@@ -17,8 +17,8 @@ type EvmProvider = {
   isCoinbaseWallet?: boolean;
 };
 
-const APP_NAME = "UNICARD";
-const APP_LOGO_URL = "https://unicard.com/favicon.ico";
+const APP_NAME = "UCARDS";
+const APP_LOGO_URL = "https://ucards.com/favicon.ico";
 
 let cachedProvider: EvmProvider | null = null;
 let initPromise: Promise<EvmProvider> | null = null;

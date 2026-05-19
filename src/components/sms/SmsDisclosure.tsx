@@ -21,7 +21,7 @@ const SmsDisclosure = () => {
         </span>{" "}
         Your USDC is escrowed on-chain. Anyone with the link can claim it once;
         you can refund yourself if the link goes unclaimed for 24 hours.
-        Settlement runs through the UNICARD privacy pool, so the recipient
+        Settlement runs through the UCARDS privacy pool, so the recipient
         address on Basescan isn't directly linked back to your deposit.
       </div>
     </div>

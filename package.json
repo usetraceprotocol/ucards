@@ -1,5 +1,5 @@
 {
-  "name": "unicard",
+  "name": "ucards",
   "private": true,
   "version": "0.1.0",
   "description": "Private virtual cards for the onchain economy. NFT-gated card issuance on Ethereum.",

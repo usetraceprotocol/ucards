@@ -16,7 +16,7 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem("unicard-theme");
+    const saved = localStorage.getItem("ucards-theme");
     return saved === "dark" ? "dark" : "light";
   });
 
@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     } else {
       root.classList.remove("dark");
     }
-    localStorage.setItem("unicard-theme", theme);
+    localStorage.setItem("ucards-theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {

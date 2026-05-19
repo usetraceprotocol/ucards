@@ -73,7 +73,7 @@ function SidebarContent() {
             animate={{ opacity: open ? 1 : 0, display: open ? "inline" : "none" }}
             className="text-sm font-semibold tracking-tight text-foreground whitespace-nowrap"
           >
-            UNICARD
+            UCARDS
           </motion.span>
         </a>
 

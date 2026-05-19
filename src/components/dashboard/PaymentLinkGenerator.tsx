@@ -1,6 +1,6 @@
 /**
  * Compose a shareable payment-link URL: pick recipient + token + amount
- * + memo and get a `unicard.com/pay?…` URL plus QR + share buttons.
+ * + memo and get a `ucards.com/pay?…` URL plus QR + share buttons.
  *
  * Everything is encoded in the URL — no server-side state. Recipient
  * defaults to the connected wallet so this doubles as a tip-jar setup.
@@ -32,7 +32,7 @@ const PaymentLinkGenerator = () => {
   const linkUrl = useMemo(() => {
     if (!isValid) return null;
     const base =
-      typeof window !== "undefined" ? window.location.origin : "https://unicard.com";
+      typeof window !== "undefined" ? window.location.origin : "https://ucards.com";
     const qs = new URLSearchParams({
       to: effectiveRecipient,
       amount,

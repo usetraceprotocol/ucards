@@ -8,7 +8,7 @@
  * No cross-device sync; migrate to Supabase if the feature outgrows v1.
  */
 
-const STORAGE_KEY = "unicard_address_book_v1";
+const STORAGE_KEY = "ucards_address_book_v1";
 const MAX_ENTRIES = 100;
 
 export type AddressBookEntryType = "address" | "username";

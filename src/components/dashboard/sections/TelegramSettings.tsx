@@ -13,7 +13,7 @@ import {
   type TelegramLinkStatus,
 } from "@/services/telegram";
 
-const BOT_USERNAME = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || "unicard_bot";
+const BOT_USERNAME = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || "ucards_bot";
 
 const TelegramSettings = () => {
   const { fullWalletAddress } = useWallet();

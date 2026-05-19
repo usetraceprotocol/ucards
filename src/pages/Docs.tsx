@@ -56,7 +56,7 @@ const Docs = () => {
           <Link to="/" className="flex items-center gap-3">
             <AltisLogo size={28} className="text-foreground" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              UNICARD
+              UCARDS
             </span>
           </Link>
           <Link
@@ -97,7 +97,7 @@ const Docs = () => {
               Documentation
             </h1>
             <p className="text-muted-foreground text-base mb-12 max-w-2xl">
-              Everything you need to start using Unicard. A private membership
+              Everything you need to start using uCards. A private membership
               wallet for stablecoin payments on Ethereum.
             </p>
 
@@ -107,7 +107,7 @@ const Docs = () => {
                   Overview
                 </h2>
                 <p>
-                  Unicard is a stablecoin wallet built for private payments on
+                  uCards is a stablecoin wallet built for private payments on
                   the Ethereum network. Your balance is held inside an encrypted
                   pool, and every transaction routes in a way that breaks the
                   on chain link between sender and receiver. The experience
@@ -127,7 +127,7 @@ const Docs = () => {
                   Getting Started
                 </h2>
                 <p>
-                  Unicard works directly in your browser. No app install is
+                  uCards works directly in your browser. No app install is
                   required. You connect with a self custody wallet that you
                   already own.
                 </p>
@@ -142,10 +142,10 @@ const Docs = () => {
                   Connecting
                 </h3>
                 <ol className="list-decimal list-inside space-y-2 ml-2">
-                  <li>Open unicard.com and click Connect Wallet.</li>
+                  <li>Open ucards.com and click Connect Wallet.</li>
                   <li>Select your wallet provider.</li>
                   <li>
-                    Approve the connection. Unicard only requests permission
+                    Approve the connection. uCards only requests permission
                     to read your address and request signatures. It never
                     holds your private keys.
                   </li>
@@ -162,7 +162,7 @@ const Docs = () => {
                 </h2>
                 <p>
                   A deposit moves stablecoins from your public wallet into your
-                  encrypted balance on Unicard. Once funds are inside the
+                  encrypted balance on uCards. Once funds are inside the
                   pool, they are no longer linked to the wallet that deposited
                   them.
                 </p>
@@ -199,7 +199,7 @@ const Docs = () => {
                   Sending Payments
                 </h2>
                 <p>
-                  You can pay any wallet on Ethereum, or any other Unicard user
+                  You can pay any wallet on Ethereum, or any other uCards user
                   by their username. Both modes preserve sender privacy. The
                   username mode also protects the recipient.
                 </p>
@@ -215,7 +215,7 @@ const Docs = () => {
                   <li>
                     Funds exit the privacy pool through an intermediate wallet
                     and arrive at the destination as a normal token transfer.
-                    The recipient does not need a Unicard account.
+                    The recipient does not need a uCards account.
                   </li>
                 </ol>
 
@@ -225,7 +225,7 @@ const Docs = () => {
                 <ol className="list-decimal list-inside space-y-2 ml-2">
                   <li>Open Payments and switch to the Username tab.</li>
                   <li>
-                    Type the recipient username. Unicard resolves it
+                    Type the recipient username. uCards resolves it
                     instantly. The recipient wallet address stays hidden from
                     you.
                   </li>
@@ -277,7 +277,7 @@ const Docs = () => {
                   Privacy Model
                 </h2>
                 <p>
-                  Unicard combines three techniques to protect your activity.
+                  uCards combines three techniques to protect your activity.
                   Each one addresses a different leak that traditional wallets
                   expose.
                 </p>
@@ -317,7 +317,7 @@ const Docs = () => {
                   What remains public
                 </h3>
                 <ul className="list-disc list-inside space-y-2 ml-2">
-                  <li>The fact that you connected a wallet to Unicard.</li>
+                  <li>The fact that you connected a wallet to uCards.</li>
                   <li>Total volume in the pool (aggregate, not per user).</li>
                   <li>Each individual transfer event on Ethereum, viewed in isolation.</li>
                 </ul>
@@ -328,7 +328,7 @@ const Docs = () => {
                   Supported Tokens and Networks
                 </h2>
                 <p>
-                  Unicard currently supports USDC and USDT on the Base
+                  uCards currently supports USDC and USDT on the Base
                   network. Additional assets and networks are planned. The
                   roadmap on the homepage lists upcoming additions.
                 </p>
@@ -344,7 +344,7 @@ const Docs = () => {
                   Fees
                 </h2>
                 <p>
-                  Unicard applies a small protocol fee on outgoing transfers
+                  uCards applies a small protocol fee on outgoing transfers
                   and withdrawals. Deposits are free of protocol fees.
                   Standard Base network gas applies to the signature you make
                   in your wallet.
@@ -364,7 +364,7 @@ const Docs = () => {
                   Self custody
                 </h3>
                 <p>
-                  Unicard never holds your private keys or seed phrase. Every
+                  uCards never holds your private keys or seed phrase. Every
                   action requires a signature from your connected wallet. If
                   you disconnect, you retain full control of your assets.
                 </p>
@@ -406,7 +406,7 @@ const Docs = () => {
                 </h3>
                 <p>
                   Yes. When you send to a Base address, the recipient does
-                  not need a Unicard account. They receive plain stablecoins
+                  not need a uCards account. They receive plain stablecoins
                   in their wallet.
                 </p>
 
@@ -429,7 +429,7 @@ const Docs = () => {
                 </p>
 
                 <h3 className="text-lg font-medium text-foreground/90 mb-3 mt-6">
-                  Is Unicard custodial?
+                  Is uCards custodial?
                 </h3>
                 <p>
                   No. Funds inside the pool remain controlled by the same
@@ -446,12 +446,12 @@ const Docs = () => {
                   For questions, feature requests, or to report an issue, the
                   fastest channel is X at{" "}
                   <a
-                    href="https://x.com/unicard"
+                    href="https://x.com/ucards"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground underline hover:no-underline"
                   >
-                    @unicard
+                    @ucards
                   </a>
                   . You can also reach the team through the contact links in
                   the footer.

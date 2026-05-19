@@ -1,5 +1,5 @@
 /**
- * GlobalChat — token-gated group chat for UNICARD users.
+ * GlobalChat — token-gated group chat for UCARDS users.
  * All users with a username can participate.
  * Future: will require $ORB token to send messages.
  */

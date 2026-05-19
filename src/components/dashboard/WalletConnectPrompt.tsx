@@ -60,7 +60,7 @@ const WalletConnectPrompt = () => {
                   Connect to Mint
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Connect the wallet that holds your UNICARD membership NFT.
+                  Connect the wallet that holds your UCARDS membership NFT.
                   Generate virtual cards, top up with USDC, and spend anywhere
                   Visa or Mastercard is accepted.
                 </p>

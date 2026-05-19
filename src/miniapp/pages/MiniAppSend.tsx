@@ -20,9 +20,9 @@ import farcasterApi from "../services/farcasterApi";
 type SendStep = "form" | "preview" | "signing" | "encrypting" | "success" | "failed";
 
 interface RecipientInfo {
-  type: "unicard" | "farcaster";
+  type: "ucards" | "farcaster";
   username: string;
-  unicardUsername?: string;
+  ucardsUsername?: string;
   hasDeposited?: boolean;
 }
 
@@ -69,7 +69,7 @@ export default function MiniAppSend() {
     try {
       // Build the transfer request
       const nonce = Date.now();
-      const messageToSign = `UNICARD Transfer: ${parsedAmount} ${token} | Nonce: ${nonce}`;
+      const messageToSign = `UCARDS Transfer: ${parsedAmount} ${token} | Nonce: ${nonce}`;
 
       // Sign with Farcaster wallet (lowercase for consistent DB matching)
       const accounts = await provider.request({ method: "eth_accounts" });
@@ -96,12 +96,12 @@ export default function MiniAppSend() {
         message_to_sign: messageToSign,
       };
 
-      // Use UNICARD username if available (for internal transfer), otherwise wallet
-      if (recipient.type === "unicard" || recipient.unicardUsername) {
+      // Use UCARDS username if available (for internal transfer), otherwise wallet
+      if (recipient.type === "ucards" || recipient.ucardsUsername) {
         transferParams.recipient_username =
-          recipient.unicardUsername || recipient.username;
+          recipient.ucardsUsername || recipient.username;
       } else {
-        // For Farcaster users without UNICARD account, use their Farcaster username
+        // For Farcaster users without UCARDS account, use their Farcaster username
         // The backend will handle resolution
         transferParams.recipient_username = `fc:${recipient.username}`;
       }

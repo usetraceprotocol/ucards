@@ -179,7 +179,7 @@ const SmsSendCard = ({ onSent }: SmsSendCardProps) => {
   async function shareUrl() {
     if (!result) return;
     const data = {
-      title: "UNICARD — private claim link",
+      title: "UCARDS — private claim link",
       text: result.note
         ? `I sent you $${result.amount} USDC — "${result.note}"`
         : `I sent you $${result.amount} USDC`,

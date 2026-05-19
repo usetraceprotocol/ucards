@@ -12,7 +12,7 @@ const Whitepaper = () => {
           <Link to="/" className="flex items-center gap-3">
             <AltisLogo size={28} className="text-foreground" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              UNICARD
+              UCARDS
             </span>
           </Link>
           <Link

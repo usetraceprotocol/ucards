@@ -1,8 +1,8 @@
 <div align="center">
 
-<img alt="UNICARD" src="./src/assets/opaq-logo.svg" width="160">
+<img alt="UCARDS" src="./src/assets/opaq-logo.svg" width="160">
 
-# UNICARD
+# UCARDS
 
 **Private virtual cards for the onchain economy.**
 
@@ -16,15 +16,15 @@ Hold `$UCARD` → mint your membership NFT → spin up unlimited private virtual
 
 ---
 
-## What is UNICARD
+## What is UCARDS
 
-UNICARD is a membership-gated virtual card layer for Ethereum. Holders of the `$UCARD` token mint a one-time card NFT, which unlocks the dashboard where they can spin up private virtual cards backed by stablecoin balances. Cards work anywhere Visa and Mastercard are accepted — checkout looks like any other card payment, your wallet stays off the ledger.
+UCARDS is a membership-gated virtual card layer for Ethereum. Holders of the `$UCARD` token mint a one-time card NFT, which unlocks the dashboard where they can spin up private virtual cards backed by stablecoin balances. Cards work anywhere Visa and Mastercard are accepted — checkout looks like any other card payment, your wallet stays off the ledger.
 
 ## How it works
 
 1. **Buy** at least 100 `$UCARD` on Ethereum
 2. **Mint** your membership NFT — one per wallet, transferable
-3. **Connect** the wallet that holds the NFT to the UNICARD dashboard
+3. **Connect** the wallet that holds the NFT to the UCARDS dashboard
 4. **Top up** USDC into your card account
 5. **Generate** virtual cards (number / expiry / CVV) on demand
 6. **Spend** anywhere Visa or Mastercard is accepted, online
@@ -48,7 +48,7 @@ npm run dev
 
 ## Attribution
 
-This project is based on **[BASEUSDP](https://github.com/BaseUsdp/BaseUSDP)** (MIT-licensed, © 2026 BASEUSDP). The original UI scaffold, scroll-morph hero, and component structure are forked under MIT. UNICARD pivots the product from private stablecoin payments on Base to NFT-gated virtual card issuance on Ethereum — the rebrand, narrative, palette, and product logic are our own.
+This project is based on **[BASEUSDP](https://github.com/BaseUsdp/BaseUSDP)** (MIT-licensed, © 2026 BASEUSDP). The original UI scaffold, scroll-morph hero, and component structure are forked under MIT. UCARDS pivots the product from private stablecoin payments on Base to NFT-gated virtual card issuance on Ethereum — the rebrand, narrative, palette, and product logic are our own.
 
 Original LICENSE is preserved.
 

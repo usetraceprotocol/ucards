@@ -32,7 +32,7 @@ const BASE_CHAIN_ID = 8453;
 const PERMIT2_ADDRESS: Address =
   "0x000000000022D473030F116dDEE9F6B43aC78BA3";
 
-// Flywheel fee configuration — routes the 0.5% swap fee to the UNICARD
+// Flywheel fee configuration — routes the 0.5% swap fee to the UCARDS
 // flywheel wallet on Ethereum (buybacks / burns / rewards).
 const FLYWHEEL_FEE_RECIPIENT: Address =
   "0xbcaE5535265c12c500aFb411E3Dcf9e0a751B39a";
@@ -119,7 +119,7 @@ export const BASE_TOKENS: TokenInfo[] = [
 // Buy-only token: users can swap INTO UCARD but not OUT of it via this UI.
 export const USDP_TOKEN: TokenInfo = {
   symbol: "UCARD",
-  name: "UNICARD",
+  name: "UCARDS",
   address: "0x0000000000000000000000000000000000000000",
   decimals: 18,
   logoUrl: usdpLogo,

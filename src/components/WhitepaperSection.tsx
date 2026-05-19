@@ -6,7 +6,7 @@ const WhitepaperSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const PDF_HREF = "/UNICARD-Whitepaper.pdf";
+  const PDF_HREF = "/UCARDS-Whitepaper.pdf";
 
   const layers = [
     {
@@ -123,7 +123,7 @@ const WhitepaperSection = () => {
             <div className="flex flex-wrap items-center gap-4">
               <motion.a
                 href={PDF_HREF}
-                download="UNICARD-Whitepaper.pdf"
+                download="UCARDS-Whitepaper.pdf"
                 className="flex items-center gap-3 bg-foreground text-background rounded-full px-6 py-3.5 text-sm font-semibold hover:bg-foreground/90 transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -143,7 +143,7 @@ const WhitepaperSection = () => {
               </a>
             </div>
             <p className="text-base text-muted-foreground leading-relaxed">
-              A digest of how UNICARD turns $UCARD holders into the
+              A digest of how UCARDS turns $UCARD holders into the
               first onchain class of private virtual-card issuers on Ethereum.
             </p>
           </motion.div>
@@ -160,7 +160,7 @@ const WhitepaperSection = () => {
             Abstract
           </p>
           <p className="text-xl md:text-2xl font-serif text-foreground/90 leading-relaxed">
-            UNICARD combines an{" "}
+            UCARDS combines an{" "}
             <span className="text-foreground font-medium">
               ERC-20 $UCARD token
             </span>

@@ -79,7 +79,7 @@ const FlywheelCard = () => {
       <div className="rounded-2xl border border-border bg-card p-6">
         <div className="flex items-center gap-2 text-muted-foreground text-sm">
           <Loader2 className="h-4 w-4 animate-spin" />
-          Loading UNICARD flywheel…
+          Loading UCARDS flywheel…
         </div>
       </div>
     );
@@ -90,7 +90,7 @@ const FlywheelCard = () => {
       <div className="rounded-2xl border border-border bg-card p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="font-display font-bold">UNICARD Flywheel</h3>
+            <h3 className="font-display font-bold">UCARDS Flywheel</h3>
             <p className="text-sm text-muted-foreground mt-1">
               {error || "Unavailable"}
             </p>
@@ -107,7 +107,7 @@ const FlywheelCard = () => {
     return (
       <div className="rounded-2xl border border-border bg-card p-6">
         <h3 className="font-display font-bold flex items-center gap-2">
-          <Flame className="h-4 w-4 text-orange-500" /> UNICARD Flywheel
+          <Flame className="h-4 w-4 text-orange-500" /> UCARDS Flywheel
         </h3>
         <p className="text-sm text-muted-foreground mt-2">
           Flywheel wallet not yet configured on this deployment.
@@ -131,7 +131,7 @@ const FlywheelCard = () => {
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="font-display font-bold flex items-center gap-2">
-            <Flame className="h-4 w-4 text-orange-500" /> UNICARD Flywheel
+            <Flame className="h-4 w-4 text-orange-500" /> UCARDS Flywheel
           </h3>
           <p className="text-xs text-muted-foreground mt-1">
             Base · fee revenue routed to a dedicated treasury wallet
