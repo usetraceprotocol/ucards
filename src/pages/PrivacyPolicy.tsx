@@ -190,7 +190,7 @@ const PrivacyPolicy = () => {
                <p className="font-medium text-foreground">UCARDS</p>
                <p className="mt-2">
                  Twitter:{" "}
-                 <a href="https://x.com/ucards" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
+                 <a href="https://x.com/uCards_" target="_blank" rel="noopener noreferrer" className="text-foreground underline hover:no-underline">
                    @uCards
                  </a>
                </p>

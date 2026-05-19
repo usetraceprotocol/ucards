@@ -446,12 +446,12 @@ const Docs = () => {
                   For questions, feature requests, or to report an issue, the
                   fastest channel is X at{" "}
                   <a
-                    href="https://x.com/ucards"
+                    href="https://x.com/uCards_"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground underline hover:no-underline"
                   >
-                    @ucards
+                    @uCards_
                   </a>
                   . You can also reach the team through the contact links in
                   the footer.

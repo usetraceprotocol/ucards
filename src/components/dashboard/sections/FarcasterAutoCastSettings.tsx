@@ -88,7 +88,7 @@ const FarcasterAutoCastSettings = () => {
         <div className="space-y-4">
           <ToggleRow
             label="Auto-cast enabled"
-            description={`Posts from @ucards mentioning @${settings.farcaster_username}.`}
+            description={`Posts from @uCards_ mentioning @${settings.farcaster_username}.`}
             value={settings.enabled}
             busy={busyKey === "enabled"}
             onChange={(v) => apply("enabled", v)}
@@ -123,7 +123,7 @@ const FarcasterAutoCastSettings = () => {
                 <p className="font-mono">
                   @{settings.farcaster_username} just shielded
                   {settings.include_amount ? " $X.XX USDC" : ""} a private
-                  deposit on Ethereum via @ucards 🛡️
+                  deposit on Ethereum via @uCards_ 🛡️
                 </p>
               </div>
             </div>
