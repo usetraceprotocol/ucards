@@ -6,7 +6,7 @@
  * 1. Frontend requests unsigned transaction from backend
  * 2. User signs transaction with their wallet (this service)
  * 3. Frontend submits signed transaction to backend
- * 4. Backend submits to Solana blockchain
+ * 4. Backend submits to Base blockchain
  */
 
 import { Transaction, PublicKey, VersionedTransaction } from "@solana/web3.js";
@@ -64,7 +64,7 @@ interface SubmitTransactionResponse {
  */
 export const getPhantomProvider = (): WalletAdapter | null => {
   if (typeof window === "undefined") return null;
-  const provider = (window as any).phantom?.solana || (window as any).solana;
+  const provider = (window as any).phantom?.base || (window as any).base;
   if (provider?.isPhantom) return provider;
   return null;
 };
@@ -183,8 +183,8 @@ export async function signAndSubmitTransaction(
     // Step 1: Build unsigned transaction
     const buildEndpoint =
       transactionType === "transfer"
-        ? "/api/solana/build-transfer-transaction"
-        : "/api/solana/build-payment-transaction";
+        ? "/api/base/build-transfer-transaction"
+        : "/api/base/build-payment-transaction";
 
     const buildResponse = await fetch(`${apiUrl}${buildEndpoint}`, {
       method: "POST",
@@ -224,7 +224,7 @@ export async function signAndSubmitTransaction(
       submitPayload.paymentId = buildPayload.paymentId;
     }
 
-    const submitResponse = await fetch(`${apiUrl}/api/solana/submit-transaction`, {
+    const submitResponse = await fetch(`${apiUrl}/api/base/submit-transaction`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(submitPayload),
@@ -292,7 +292,7 @@ export async function executeConfidentialTransfer(
 }
 
 /**
- * Execute an x402 payment settlement with client-side signing
+ * Execute an card-issuance payment settlement with client-side signing
  * 
  * @param wallet Wallet adapter
  * @param paymentId Payment ID

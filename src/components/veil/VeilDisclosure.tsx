@@ -28,7 +28,7 @@ const VeilDisclosure = () => {
         >
           veil.cash
         </a>
-        . BASEUSDP is not the custodian of these funds. Withdrawals are
+        . UNICARD is not the custodian of these funds. Withdrawals are
         governed by veil.cash's contracts and relay. Once funds are deposited,
         Veil's team has no admin control over them.
       </div>

@@ -61,7 +61,7 @@ export function ScrollHeroSection({
               className="inline-block text-xs font-semibold uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-8"
               style={{ border: '1px solid hsl(0 0% 70%)', color: 'hsl(0 0% 10%)' }}
             >
-              Web4 Ready · Agentic Economy Optimized
+              Onchain Ready · Membership Economy Optimized
             </span>
             <h2
               className="font-serif"
@@ -73,21 +73,21 @@ export function ScrollHeroSection({
                 color: 'hsl(0 0% 0%)',
               }}
             >
-              The Private Agentic
+              The Membership
               <br />
-              <em className="not-italic" style={{ background: 'linear-gradient(135deg, hsl(270 80% 65%), hsl(320 80% 60%), hsl(30 90% 60%), hsl(50 95% 55%), hsl(80 90% 55%))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', paddingBottom: '0.15em', paddingRight: '0.08em', lineHeight: 1.3 }}>Wallet for Web4</em>
+              <em className="not-italic" style={{ background: 'linear-gradient(135deg, hsl(170 75% 60%), hsl(180 80% 55%), hsl(190 85% 60%), hsl(200 85% 65%), hsl(220 80% 70%))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', paddingBottom: '0.15em', paddingRight: '0.08em', lineHeight: 1.3 }}>Card for Ethereum</em>
             </h2>
             <p className="mt-8 text-base leading-relaxed max-w-lg" style={{ color: 'hsl(0 0% 20%)' }}>
-              USDP pioneers the confidential infrastructure for the Web4 agentic economy. Our ZK-powered platform empowers institutions, developers, and AI agents to transact on Base with unparalleled privacy, ushering in an era of secure, autonomous commerce.
+              UCARD pioneers the confidential infrastructure for the onchain card economy. Our NFT-gated platform empowers institutions, developers, and cardholders to transact on Ethereum with unparalleled privacy, ushering in an era of secure, private commerce.
             </p>
 
             {/* Stats + CTA bar */}
             <div className="w-full max-w-3xl mt-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-8" style={{ borderTop: '1px solid hsl(0 0% 70%)' }}>
               <div className="flex items-center gap-8">
                 {[
-                  { label: 'x402 Payments', value: 'Autonomous Exchange' },
+                  { label: 'card-issuance Payments', value: 'Autonomous Exchange' },
                   { label: 'ZK Privacy', value: 'Guaranteed' },
-                  { label: 'Base L2', value: 'High-Speed Settlement' },
+                  { label: 'Base', value: 'High-Speed Settlement' },
                 ].map((stat, i) => (
                   <div key={stat.label} className="flex items-center gap-8">
                      {i > 0 && <div className="w-px h-8" style={{ background: 'hsl(0 0% 70%)' }} />}

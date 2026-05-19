@@ -93,7 +93,7 @@ const DashboardRightSidebar = ({ showBalance, onNavigateToPaymentsTab }: Dashboa
 
   const quickActions = [
     { icon: Send, label: "Send Payment", color: "text-sky-400", onClick: () => setSendModalOpen(true) },
-    { icon: Download, label: "Request Payment", color: "text-purple-400", onClick: () => onNavigateToPaymentsTab?.("x402") },
+    { icon: Download, label: "Request Payment", color: "text-purple-400", onClick: () => onNavigateToPaymentsTab?.("card-issuance") },
   ];
 
   const surface = { background: 'var(--dash-surface)' };
@@ -268,7 +268,7 @@ const DashboardRightSidebar = ({ showBalance, onNavigateToPaymentsTab }: Dashboa
             </div>
           ) : castMentions.length === 0 ? (
             <p className="text-[11px] py-2" style={{ color: 'var(--dash-text-muted)' }}>
-              No @baseusdp mentions yet
+              No @unicard mentions yet
             </p>
           ) : (
             <div className="space-y-1.5">

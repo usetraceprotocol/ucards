@@ -157,7 +157,7 @@ export default function MiniAppDeposit() {
       // === STEP 3: Poll auto-split (wait for funds to arrive at holding wallet) ===
       setStep("waitingForFunds");
       setProgress(5);
-      setStatusText("Detecting deposit on Base...");
+      setStatusText("Detecting deposit on Ethereum...");
 
       let numSplits = 0;
       let skipMixer = false;

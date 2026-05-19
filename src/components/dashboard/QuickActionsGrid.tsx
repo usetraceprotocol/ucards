@@ -18,7 +18,7 @@ const QuickActionsGrid = ({ onAction }: QuickActionsGridProps) => {
     { 
       id: "request", 
       icon: Download, 
-      label: "Request x402", 
+      label: "Request card-issuance", 
       description: "Create payment request",
       color: "from-accent to-purple-500"
     },
@@ -26,7 +26,7 @@ const QuickActionsGrid = ({ onAction }: QuickActionsGridProps) => {
       id: "pay_x402", 
       icon: CreditCard, 
       label: "Pay Request", 
-      description: "Pay x402 payment",
+      description: "Pay card-issuance payment",
       color: "from-pink-500 to-rose-500"
     },
     { 

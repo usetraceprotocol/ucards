@@ -60,7 +60,7 @@ const OverviewSection = ({ showBalance, setShowBalance, setActiveTab }: Overview
           Dashboard<span className="text-primary">.</span>
         </h1>
         <p className="text-muted-foreground mt-1">
-          Privacy-first encrypted payments on Base
+          Privacy-first encrypted payments on Ethereum
         </p>
       </div>
 
@@ -91,7 +91,7 @@ const OverviewSection = ({ showBalance, setShowBalance, setActiveTab }: Overview
       {/* Quick Actions */}
       <QuickActionsGrid onAction={handleQuickAction} />
 
-      {/* BASEUSDP Flywheel */}
+      {/* UNICARD Flywheel */}
       <FlywheelCard />
 
       {/* Recent Transactions */}

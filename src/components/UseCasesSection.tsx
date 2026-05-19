@@ -11,7 +11,7 @@ const UseCasesSection = () => {
       icon: "ph:robot-fill",
       tag: "Autonomous Agents",
       title: "Agent-to-Agent Commerce",
-      description: "AI agents autonomously negotiate, pay, and settle transactions with built-in privacy — no human intervention required.",
+      description: "cardholders autonomously negotiate, pay, and settle transactions with built-in privacy — no human intervention required.",
       features: ["Autonomous Payments", "Agent Identity Verification", "Private Negotiations", "Machine-Speed Settlement"],
       accentColor: "var(--beam-cyan)",
     },
@@ -27,7 +27,7 @@ const UseCasesSection = () => {
       icon: "ph:user-fill",
       tag: "Human Participants",
       title: "Privacy-First for Humans",
-      description: "Humans in the Web4 economy deserve the same privacy as machines. Transact, earn, and manage assets without surveillance.",
+      description: "Humans in the onchain card economy deserve the same privacy as machines. Transact, earn, and manage assets without surveillance.",
       features: ["Anonymous Payments", "Hidden Balances", "Zero Data Leaks", "Agent-Compatible Wallets"],
       accentColor: "var(--beam-green)",
     },
@@ -53,7 +53,7 @@ const UseCasesSection = () => {
         >
           <h2 className="display-section font-serif text-foreground">
             Built for the{" "}
-            <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Web4</em> Economy
+            <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Onchain</em> Economy
           </h2>
         </motion.div>
         <motion.div
@@ -63,7 +63,7 @@ const UseCasesSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-base text-muted-foreground leading-relaxed">
-            From autonomous agents to human participants, confidential payments for every actor in the Web4 economy.
+            From cardholders to human participants, confidential payments for every actor in the onchain card economy.
           </p>
         </motion.div>
       </div>

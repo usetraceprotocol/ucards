@@ -134,7 +134,7 @@ const X402PaymentModal = ({ open, onOpenChange, initialAmount }: X402PaymentModa
             <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center">
               <Download className="w-4 h-4 text-accent" />
             </div>
-            {step === "form" && "Create x402 Payment Request"}
+            {step === "form" && "Create card-issuance Payment Request"}
             {step === "creating" && "Creating Payment Request..."}
             {step === "success" && "Payment Request Created"}
           </DialogTitle>
@@ -193,7 +193,7 @@ const X402PaymentModal = ({ open, onOpenChange, initialAmount }: X402PaymentModa
               {/* Info */}
               <div className="rounded-xl bg-accent/5 border border-accent/20 p-4">
                 <p className="text-sm text-muted-foreground">
-                  Create a shareable payment request using the x402 protocol. 
+                  Create a shareable payment request using the card-issuance protocol. 
                   Once paid, funds will be automatically transferred to your wallet.
                 </p>
               </div>

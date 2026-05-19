@@ -112,8 +112,8 @@ const ProtectedRoute = ({ children, requireAuth = true }: ProtectedRouteProps) =
     setAuthError(null);
 
     try {
-      // Get the wallet adapter — supports Phantom (Solana + EVM) and MetaMask (EVM)
-      const phantomSolana = (window as any).phantom?.solana || (window as any).solana;
+      // Get the wallet adapter — supports Phantom (Base + EVM) and MetaMask (EVM)
+      const phantomSolana = (window as any).phantom?.base || (window as any).base;
       const phantomEVM = (window as any).phantom?.ethereum;
       const metaMask = (window as any).ethereum?.isMetaMask && !(window as any).ethereum?.isPhantom ? (window as any).ethereum : null;
 
@@ -129,13 +129,13 @@ const ProtectedRoute = ({ children, requireAuth = true }: ProtectedRouteProps) =
       const walletAdapter = {
         publicKey: solanaWallet?.publicKey ? { toBase58: () => solanaWallet.publicKey.toString() } : null,
         address: fullWalletAddress,
-        chain: evmProvider ? "base" as const : "solana" as const,
+        chain: evmProvider ? "base" as const : "base" as const,
         signMessage: async (message: Uint8Array) => {
           if (solanaWallet?.isPhantom && solanaWallet.signMessage) {
             const { signature } = await solanaWallet.signMessage(message, "utf8");
             return signature;
           }
-          throw new Error("Wallet does not support Solana message signing");
+          throw new Error("Wallet does not support Base message signing");
         },
         signEVMMessage: evmProvider ? async (message: string): Promise<string> => {
           const accounts = await evmProvider.request({ method: 'eth_accounts' });

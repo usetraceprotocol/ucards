@@ -14,7 +14,7 @@ interface TransactionHistoryFullProps {
 }
 
 type TransactionStatus = "success" | "pending" | "failed";
-type TransactionType = "transfer" | "x402" | "deposit";
+type TransactionType = "transfer" | "card-issuance" | "deposit";
 
 interface Transaction {
   id: string;
@@ -53,7 +53,7 @@ const convertApiTransaction = (tx: TransactionHistoryResponse["transactions"][0]
   }
   
   let type: TransactionType = "transfer";
-  if (tx.type === "payment") type = "x402";
+  if (tx.type === "payment") type = "card-issuance";
   else if (tx.type === "deposit") type = "deposit";
   else if (tx.type === "withdraw") type = "transfer";
   
@@ -130,7 +130,7 @@ const TransactionHistoryFull = ({ showBalance }: TransactionHistoryFullProps) =>
       result = result.filter(tx => {
         if (filter === "sent") return tx.direction === "sent";
         if (filter === "received") return tx.direction === "received" || tx.direction === "deposit";
-        if (filter === "x402") return tx.type === "x402";
+        if (filter === "card-issuance") return tx.type === "card-issuance";
         if (filter === "transfer") return tx.type === "transfer" || tx.type === "deposit";
         return true;
       });
@@ -188,7 +188,7 @@ const TransactionHistoryFull = ({ showBalance }: TransactionHistoryFullProps) =>
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `usdp_transactions_${new Date().toISOString().split("T")[0]}.csv`;
+    a.download = `opaq_transactions_${new Date().toISOString().split("T")[0]}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -271,9 +271,9 @@ const TransactionHistoryFull = ({ showBalance }: TransactionHistoryFullProps) =>
                       <>Received from <AddressDisplay value={tx.counterparty} /></>
                     )}
                   </p>
-                  {tx.type === "x402" && (
+                  {tx.type === "card-issuance" && (
                     <span className="text-xs px-1.5 py-0.5 rounded bg-primary/20 text-primary font-medium">
-                      x402
+                      card-issuance
                     </span>
                   )}
                   {tx.type === "deposit" && (

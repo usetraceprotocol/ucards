@@ -56,7 +56,7 @@ const Docs = () => {
           <Link to="/" className="flex items-center gap-3">
             <AltisLogo size={28} className="text-foreground" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              BASEUSDP
+              UNICARD
             </span>
           </Link>
           <Link
@@ -97,8 +97,8 @@ const Docs = () => {
               Documentation
             </h1>
             <p className="text-muted-foreground text-base mb-12 max-w-2xl">
-              Everything you need to start using BaseUSDP. A private agentic
-              wallet for stablecoin payments on Base.
+              Everything you need to start using Unicard. A private membership
+              wallet for stablecoin payments on Ethereum.
             </p>
 
             <div className="space-y-16 text-muted-foreground leading-relaxed">
@@ -107,8 +107,8 @@ const Docs = () => {
                   Overview
                 </h2>
                 <p>
-                  BaseUSDP is a stablecoin wallet built for private payments on
-                  the Base network. Your balance is held inside an encrypted
+                  Unicard is a stablecoin wallet built for private payments on
+                  the Ethereum network. Your balance is held inside an encrypted
                   pool, and every transaction routes in a way that breaks the
                   on chain link between sender and receiver. The experience
                   feels like a normal wallet. The on chain footprint does not
@@ -127,7 +127,7 @@ const Docs = () => {
                   Getting Started
                 </h2>
                 <p>
-                  BaseUSDP works directly in your browser. No app install is
+                  Unicard works directly in your browser. No app install is
                   required. You connect with a self custody wallet that you
                   already own.
                 </p>
@@ -142,10 +142,10 @@ const Docs = () => {
                   Connecting
                 </h3>
                 <ol className="list-decimal list-inside space-y-2 ml-2">
-                  <li>Open baseusdp.com and click Connect Wallet.</li>
+                  <li>Open unicard.com and click Connect Wallet.</li>
                   <li>Select your wallet provider.</li>
                   <li>
-                    Approve the connection. BaseUSDP only requests permission
+                    Approve the connection. Unicard only requests permission
                     to read your address and request signatures. It never
                     holds your private keys.
                   </li>
@@ -162,7 +162,7 @@ const Docs = () => {
                 </h2>
                 <p>
                   A deposit moves stablecoins from your public wallet into your
-                  encrypted balance on BaseUSDP. Once funds are inside the
+                  encrypted balance on Unicard. Once funds are inside the
                   pool, they are no longer linked to the wallet that deposited
                   them.
                 </p>
@@ -199,7 +199,7 @@ const Docs = () => {
                   Sending Payments
                 </h2>
                 <p>
-                  You can pay any wallet on Base, or any other BaseUSDP user
+                  You can pay any wallet on Ethereum, or any other Unicard user
                   by their username. Both modes preserve sender privacy. The
                   username mode also protects the recipient.
                 </p>
@@ -215,7 +215,7 @@ const Docs = () => {
                   <li>
                     Funds exit the privacy pool through an intermediate wallet
                     and arrive at the destination as a normal token transfer.
-                    The recipient does not need a BaseUSDP account.
+                    The recipient does not need a Unicard account.
                   </li>
                 </ol>
 
@@ -225,7 +225,7 @@ const Docs = () => {
                 <ol className="list-decimal list-inside space-y-2 ml-2">
                   <li>Open Payments and switch to the Username tab.</li>
                   <li>
-                    Type the recipient username. BaseUSDP resolves it
+                    Type the recipient username. Unicard resolves it
                     instantly. The recipient wallet address stays hidden from
                     you.
                   </li>
@@ -249,7 +249,7 @@ const Docs = () => {
                 </h2>
                 <p>
                   A withdrawal moves stablecoins from your encrypted balance
-                  back out to any wallet on Base. The destination can be your
+                  back out to any wallet on Ethereum. The destination can be your
                   own wallet, a friend, or an exchange address.
                 </p>
                 <h3 className="text-lg font-medium text-foreground/90 mb-3 mt-6">
@@ -277,7 +277,7 @@ const Docs = () => {
                   Privacy Model
                 </h2>
                 <p>
-                  BaseUSDP combines three techniques to protect your activity.
+                  Unicard combines three techniques to protect your activity.
                   Each one addresses a different leak that traditional wallets
                   expose.
                 </p>
@@ -317,9 +317,9 @@ const Docs = () => {
                   What remains public
                 </h3>
                 <ul className="list-disc list-inside space-y-2 ml-2">
-                  <li>The fact that you connected a wallet to BaseUSDP.</li>
+                  <li>The fact that you connected a wallet to Unicard.</li>
                   <li>Total volume in the pool (aggregate, not per user).</li>
-                  <li>Each individual transfer event on Base, viewed in isolation.</li>
+                  <li>Each individual transfer event on Ethereum, viewed in isolation.</li>
                 </ul>
               </section>
 
@@ -328,7 +328,7 @@ const Docs = () => {
                   Supported Tokens and Networks
                 </h2>
                 <p>
-                  BaseUSDP currently supports USDC and USDT on the Base
+                  Unicard currently supports USDC and USDT on the Base
                   network. Additional assets and networks are planned. The
                   roadmap on the homepage lists upcoming additions.
                 </p>
@@ -344,7 +344,7 @@ const Docs = () => {
                   Fees
                 </h2>
                 <p>
-                  BaseUSDP applies a small protocol fee on outgoing transfers
+                  Unicard applies a small protocol fee on outgoing transfers
                   and withdrawals. Deposits are free of protocol fees.
                   Standard Base network gas applies to the signature you make
                   in your wallet.
@@ -364,7 +364,7 @@ const Docs = () => {
                   Self custody
                 </h3>
                 <p>
-                  BaseUSDP never holds your private keys or seed phrase. Every
+                  Unicard never holds your private keys or seed phrase. Every
                   action requires a signature from your connected wallet. If
                   you disconnect, you retain full control of your assets.
                 </p>
@@ -406,7 +406,7 @@ const Docs = () => {
                 </h3>
                 <p>
                   Yes. When you send to a Base address, the recipient does
-                  not need a BaseUSDP account. They receive plain stablecoins
+                  not need a Unicard account. They receive plain stablecoins
                   in their wallet.
                 </p>
 
@@ -429,7 +429,7 @@ const Docs = () => {
                 </p>
 
                 <h3 className="text-lg font-medium text-foreground/90 mb-3 mt-6">
-                  Is BaseUSDP custodial?
+                  Is Unicard custodial?
                 </h3>
                 <p>
                   No. Funds inside the pool remain controlled by the same
@@ -446,12 +446,12 @@ const Docs = () => {
                   For questions, feature requests, or to report an issue, the
                   fastest channel is X at{" "}
                   <a
-                    href="https://x.com/UsdpBase"
+                    href="https://x.com/unicard"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground underline hover:no-underline"
                   >
-                    @UsdpBase
+                    @unicard
                   </a>
                   . You can also reach the team through the contact links in
                   the footer.

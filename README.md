@@ -1,130 +1,57 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./src/assets/usdp-logo-white.png">
-  <img alt="BASEUSDP" src="./src/assets/usdp-logo.png" width="180">
-</picture>
+<img alt="UNICARD" src="./src/assets/opaq-logo.svg" width="160">
 
-# BASEUSDP
+# UNICARD
 
-**Privacy-First Payments for the AI Economy.**
+**Private virtual cards for the onchain economy.**
 
-Confidential transactions powered by Zero-Knowledge Proofs.
-x402 payments that keep your financial data encrypted — always.
+NFT-gated card issuance on Ethereum.
+Hold `$UCARD` → mint your membership NFT → spin up unlimited private virtual cards.
 
-[![Built on Base](https://img.shields.io/badge/Built%20on-Base-0052FF?style=flat-square)](https://www.base.org)
-[![x402](https://img.shields.io/badge/Protocol-x402-000000?style=flat-square)](https://www.x402.org)
+[![Built on Ethereum](https://img.shields.io/badge/Built%20on-Ethereum-627EEA?style=flat-square)](https://ethereum.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Twitter](https://img.shields.io/badge/Twitter-%40UsdpBase-1DA1F2?style=flat-square&logo=x)](https://x.com/UsdpBase)
-
-[Live App](https://baseusdp.com) · [Twitter](https://x.com/UsdpBase) · [Docs](https://www.baseusdp.com/docs)
 
 </div>
 
 ---
 
-## Overview
+## What is UNICARD
 
-BASEUSDP is a privacy-first payments layer built for the **Web4 agentic economy** — where AI agents, not just humans, are primary economic actors. We enable confidential money movement and machine-to-machine commerce on Base, without exposing balances, amounts, counterparties, or links to your main wallet.
+UNICARD is a membership-gated virtual card layer for Ethereum. Holders of the `$UCARD` token mint a one-time card NFT, which unlocks the dashboard where they can spin up private virtual cards backed by stablecoin balances. Cards work anywhere Visa and Mastercard are accepted — checkout looks like any other card payment, your wallet stays off the ledger.
 
-Everything we ship is engineered around a single principle: **financial activity should be verifiable, not visible.**
+## How it works
 
-## Why BASEUSDP
+1. **Buy** at least 100 `$UCARD` on Ethereum
+2. **Mint** your membership NFT — one per wallet, transferable
+3. **Connect** the wallet that holds the NFT to the UNICARD dashboard
+4. **Top up** USDC into your card account
+5. **Generate** virtual cards (number / expiry / CVV) on demand
+6. **Spend** anywhere Visa or Mastercard is accepted, online
 
-Public blockchains are radically transparent. Every payment, balance, and behavioral pattern is permanently indexed. For humans this is uncomfortable; for autonomous agents executing strategy at scale, it is a structural risk.
+## Tech
 
-BASEUSDP solves this with cryptographic privacy guarantees layered on top of Base, paired with the x402 payment standard for native, internet-scale value exchange.
+- **Frontend** — React 18 + Vite + TypeScript + Tailwind + shadcn/ui + Framer Motion
+- **Wallets** — wagmi / viem, MetaMask + Coinbase Wallet + Rainbow + WalletConnect
+- **Token** — ERC-20 `$UCARD` on Ethereum mainnet
+- **Membership** — ERC-721 NFT, minted once per qualifying wallet
+- **Card rails** — virtual-card issuance via licensed processor (TBD)
+- **Settlement** — USDC on Ethereum mainnet
 
-## Features
-
-- **Private Transfers** — Send funds with encrypted amounts and confidential recipients
-- **Private Online Payments** — Pay for content, APIs, and services using the x402 standard
-- **Encrypted Balances** — Your balance is private; you choose what is disclosed and to whom
-- **Agentic-Ready** — Purpose-built primitives so AI agents can transact autonomously and confidentially
-- **Base-Native** — Low fees, fast finality, Ethereum-grade security
-- **Privacy by Default** — No opt-in toggles, no leaked metadata, no spending pattern tracking
-
-## Technology
-
-### Zero-Knowledge Proofs (ZKPs)
-
-ZKPs are the cryptographic engine of BASEUSDP. They let the network verify that a transaction is valid — correct balance, valid signature, no double-spend — *without* revealing the amount, the sender, or the receiver. This is the same class of math that makes modern privacy-preserving systems possible, applied to everyday payments.
-
-### x402 — The Internet-Native Payment Standard
-
-The x402 protocol revives HTTP status code `402 Payment Required` as the language of machine-to-machine commerce. With x402, an API, an article, or a service can natively demand payment as part of a request — and BASEUSDP wallets can answer that demand programmatically, privately, and instantly. This is what makes the agentic economy actually transact.
-
-### Built on Base
-
-Base is Ethereum's leading L2 — low fees, high throughput, and the security guarantees of Ethereum. BASEUSDP runs natively on Base so confidential payments stay fast, cheap, and battle-tested.
-
-### Frontend
-
-- **React + Vite + TypeScript** — modern, type-safe, fast
-- **Tailwind CSS** + **shadcn/ui** — design system primitives
-- **Framer Motion** — interaction and motion design
-- **wagmi / viem** — Ethereum wallet and contract interaction
-
-## Use Cases
-
-| Audience | What BASEUSDP unlocks |
-|---|---|
-| **Individuals** | Send and receive money on Base without broadcasting amounts to the world |
-| **Creators & APIs** | Charge per request with x402 — no accounts, no card processors, just payments |
-| **AI Agents** | Autonomous wallets that can pay, get paid, and execute strategy without leaking position |
-| **Businesses** | Settle B2B payments on-chain with confidential amounts and counterparties |
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- A modern browser with a Web3 wallet (MetaMask, Coinbase Wallet, etc.)
-
-### Run locally
+## Running locally
 
 ```bash
-git clone https://github.com/BaseUsdp/BaseUSDP.git
-cd BaseUSDP
-npm install
+npm install --legacy-peer-deps
 npm run dev
+# → http://localhost:4280
 ```
 
-The dev server starts on [http://localhost:5173](http://localhost:5173).
+## Attribution
 
-### Build for production
+This project is based on **[BASEUSDP](https://github.com/BaseUsdp/BaseUSDP)** (MIT-licensed, © 2026 BASEUSDP). The original UI scaffold, scroll-morph hero, and component structure are forked under MIT. UNICARD pivots the product from private stablecoin payments on Base to NFT-gated virtual card issuance on Ethereum — the rebrand, narrative, palette, and product logic are our own.
 
-```bash
-npm run build
-npm run preview
-```
-
-## Project Structure
-
-```
-.
-├── src/
-│   ├── components/     UI components and dashboard
-│   ├── pages/          Route-level pages
-│   ├── contexts/       Wallet and app-wide providers
-│   ├── services/       Client-side service layer
-│   └── assets/         Brand assets and images
-├── public/             Static assets served at root
-└── index.html          Application entry
-```
-
-## Community
-
-- **Website** — [baseusdp.com](https://baseusdp.com)
-- **Twitter / X** — [@UsdpBase](https://x.com/UsdpBase)
-- **Farcaster** — [@baseusdp](https://farcaster.xyz/baseusdp)
+Original LICENSE is preserved.
 
 ## License
 
-Released under the [MIT License](./LICENSE).
-
----
-
-<div align="center">
-  <sub>Built with privacy in mind, on <a href="https://www.base.org">Base</a>.</sub>
-</div>
+MIT

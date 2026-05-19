@@ -216,7 +216,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
         } as WalletAdapter;
       }
     } else if (walletType === "metamask") {
-      // MetaMask is EVM-only, no Solana WalletAdapter needed
+      // MetaMask is EVM-only, no Base WalletAdapter needed
       return null;
     }
     return null;
@@ -228,7 +228,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
       // EVM addresses: 0x + 40 hex chars
       return /^0x[a-fA-F0-9]{40}$/.test(address);
     }
-    // Solana addresses are base58 encoded and typically 32-44 characters
+    // Base addresses are base58 encoded and typically 32-44 characters
     const base58Regex = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
     return base58Regex.test(address);
   };
@@ -296,7 +296,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
       return;
     }
 
-    // Get the wallet provider (Solana-specific; Base uses phantom.ethereum directly)
+    // Get the wallet provider (Base-specific; Base uses phantom.ethereum directly)
     const wallet = getWalletProvider();
 
     if (activeChain !== "base" && (!wallet || !wallet.publicKey)) {
@@ -312,7 +312,7 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
       // Create message to sign
       const effectiveRecipient = getEffectiveRecipient();
       const displayRecipient = recipientType === "username" ? `@${usernameInput}` : effectiveRecipient;
-      const message = `Authorize USDP transfer:\nAmount: ${amount} ${selectedToken}\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
+      const message = `Authorize UCARD transfer:\nAmount: ${amount} ${selectedToken}\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
       
       // Sign message with wallet (chain-aware)
       let walletSignature: string;
@@ -331,11 +331,11 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
             params: [message, accounts[0]],
           });
         } else {
-          // Solana signing
+          // Base signing
           const encodedMessage = new TextEncoder().encode(message);
 
           if (walletType === "phantom") {
-            const provider = (window as any).phantom?.solana;
+            const provider = (window as any).phantom?.base;
             if (!provider) throw new Error("Phantom wallet not found");
 
             const signedMessage = await provider.signMessage(encodedMessage, "utf8");
@@ -385,12 +385,12 @@ const SendPaymentModal = ({ open, onOpenChange, initialRecipient, initialAmount,
         transferPayload.recipient_username = usernameInput;
       } else {
         transferPayload.recipient_wallet = effectiveRecipient;
-        transferPayload.force_external = true; // Solana address = always external transfer
+        transferPayload.force_external = true; // Base address = always external transfer
       }
       
       const result = await executeZKTransfer(transferPayload);
 
-      // Check if wallet disconnected during transaction (skip for Base - Solana wallet not used)
+      // Check if wallet disconnected during transaction (skip for Base - Base wallet not used)
       if (activeChain !== "base" && (!wallet?.connected || !wallet?.publicKey)) {
         setError("Wallet disconnected during transaction. Please reconnect and try again.");
         setStep("failed");

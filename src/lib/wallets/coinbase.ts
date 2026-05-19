@@ -17,8 +17,8 @@ type EvmProvider = {
   isCoinbaseWallet?: boolean;
 };
 
-const APP_NAME = "BASEUSDP";
-const APP_LOGO_URL = "https://baseusdp.com/favicon.ico";
+const APP_NAME = "UNICARD";
+const APP_LOGO_URL = "https://unicard.com/favicon.ico";
 
 let cachedProvider: EvmProvider | null = null;
 let initPromise: Promise<EvmProvider> | null = null;
@@ -33,7 +33,7 @@ async function initProvider(): Promise<EvmProvider> {
   const sdk = new SDKCtor({
     appName: APP_NAME,
     appLogoUrl: APP_LOGO_URL,
-    appChainIds: [8453], // Base mainnet
+    appChainIds: [8453], // Ethereum mainnet
   });
   // makeWeb3Provider returns the EIP-1193 provider.
   const provider = sdk.makeWeb3Provider() as EvmProvider;

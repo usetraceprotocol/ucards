@@ -32,7 +32,7 @@ export default function MiniAppHome() {
             Deposit USDC to get started
           </span>
           <p className="text-xs text-indigo-200 mt-0.5">
-            Privacy-protected on Base
+            Privacy-protected on Ethereum
           </p>
         </button>
       )}
@@ -73,7 +73,7 @@ export default function MiniAppHome() {
       {/* Privacy badge */}
       <div className="flex items-center justify-center gap-1.5 py-2 text-xs text-zinc-500">
         <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-        Protected by ZK proofs on Base
+        Protected by ZK proofs on Ethereum
       </div>
     </div>
   );

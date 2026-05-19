@@ -5,7 +5,7 @@
  * VEIL_SIGNED_MESSAGE by the user's wallet.  It is held in React state
  * for the lifetime of the session and never persisted to localStorage.
  *
- * Isolated from BASEUSDP pool state — does not touch WalletContext's
+ * Isolated from UNICARD pool state — does not touch WalletContext's
  * internal state, only reads its public values.
  */
 

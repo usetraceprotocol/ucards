@@ -408,7 +408,7 @@ const VeilDepositModal = ({ open, onClose, onDeposited }: Props) => {
                 <p>
                   Veil's entry contract only accepts deposits from pre-verified
                   wallets. Verify once (free, ~2 min) with any of these — the
-                  attestation lands on Base and you can deposit immediately
+                  attestation lands on Ethereum and you can deposit immediately
                   after:
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">

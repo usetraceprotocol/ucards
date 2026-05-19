@@ -2,7 +2,7 @@
  * Client-side EVM provider helpers used by the Veil + SMS flows.
  *
  * Lives outside WalletContext on purpose — these flows must not import from
- * or modify the BASEUSDP pool's wallet context.
+ * or modify the UNICARD pool's wallet context.
  *
  * Despite the directory name (`veil/`), the helpers are wallet-agnostic and
  * shared by the SMS Pay layer too.

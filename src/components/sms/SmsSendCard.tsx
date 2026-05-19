@@ -2,7 +2,7 @@
  * Private Link send card.
  *
  * Flow (no SMS, no off-chain dispatch):
- *  1. Validate amount + check USDC balance on Base.
+ *  1. Validate amount + check USDC balance on Ethereum.
  *  2. If allowance < amount, prompt USDC.approve(escrow, maxUint256).
  *  3. Prompt escrow.depositFor(claimToken, amount).
  *  4. After confirmation, show the claim URL with copy + native-share buttons
@@ -126,7 +126,7 @@ const SmsSendCard = ({ onSent }: SmsSendCardProps) => {
       ]);
       if (bal < amountUnits) {
         throw new Error(
-          `Insufficient USDC on Base. Have ${(Number(bal) / 1e6).toFixed(2)}, need ${amount}.`
+          `Insufficient USDC on Ethereum. Have ${(Number(bal) / 1e6).toFixed(2)}, need ${amount}.`
         );
       }
 
@@ -179,7 +179,7 @@ const SmsSendCard = ({ onSent }: SmsSendCardProps) => {
   async function shareUrl() {
     if (!result) return;
     const data = {
-      title: "BASEUSDP — private claim link",
+      title: "UNICARD — private claim link",
       text: result.note
         ? `I sent you $${result.amount} USDC — "${result.note}"`
         : `I sent you $${result.amount} USDC`,

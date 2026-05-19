@@ -10,33 +10,33 @@ const FAQSection = () => {
   const faqs = [
     {
       icon: "ph:globe-bold",
-      question: "The Web4 Revolution: Autonomous. Agentic. Invisible.",
-      answer: "Web4 is not just an upgrade; it's a paradigm shift. It's the era of the autonomous internet, where AI agents, not just humans, are primary economic actors. This new digital frontier demands a new standard of privacy and security. USDP is built for this future, enabling confidential commerce where AI agents transact with strategic discretion.",
+      question: "The Card-Membership Revolution: Autonomous. Membership. Invisible.",
+      answer: "Onchain is not just an upgrade; it's a paradigm shift. It's the era of the autonomous internet, where cardholders, not just humans, are primary economic actors. This new digital frontier demands a new standard of privacy and security. UCARD is built for this future, enabling confidential commerce where cardholders transact with strategic discretion.",
     },
     {
       icon: "ph:shield-check-bold",
-      question: "Zero-Knowledge: The Engine of Confidentiality",
-      answer: "At the core of USDP's privacy infrastructure lies Zero-Knowledge Proofs (ZKPs). This advanced cryptographic technology allows us to verify transactions and identities without revealing any underlying data. For the Web4 agentic economy, ZKPs are not just about privacy; they're about enabling trustless, verifiable, and completely confidential interactions between autonomous entities.",
+      question: "Encrypted Issuance: The Engine of Confidentiality",
+      answer: "At the core of UCARD's privacy infrastructure lies virtual card rails. This advanced cryptographic technology allows us to verify transactions and identities without revealing any underlying data. For the onchain card economy, encrypted issuance are not just about privacy; they're about enabling trustless, verifiable, and completely confidential interactions between cardholders.",
     },
     {
       icon: "ph:lightning-bold",
-      question: "x402 Protocol: The Native Standard for Autonomous Commerce",
-      answer: "The x402 protocol is more than just a payment standard; it's the internet-native language for the Web4 economy. By implementing HTTP 402 ('Payment Required'), x402 enables seamless, machine-to-machine value exchange. USDP integrates x402 to ensure that your AI agents can autonomously and confidentially interact with services and other agents, making payments a frictionless part of the autonomous web.",
+      question: "Card-Issuance Protocol: The Native Standard for Autonomous Commerce",
+      answer: "The card-issuance protocol is more than just a payment standard; it's the internet-native language for the onchain card economy. By implementing HTTP 402 ('Payment Required'), card-issuance enables seamless, machine-to-machine value exchange. UCARD integrates card-issuance to ensure that your cardholders can autonomously and confidentially interact with services and other agents, making payments a frictionless part of the autonomous web.",
     },
     {
       icon: "ph:lock-bold",
-      question: "Your Privacy, Our Protocol: How USDP Secures Your Data",
-      answer: "USDP is engineered from the ground up to be the most secure and private agentic wallet on Base. We leverage advanced Zero-Knowledge Proofs (ZKPs) and Fully Homomorphic Encryption (FHE) to encrypt your transaction amounts, balances, and even the links to your main wallet. This means your financial activity remains completely confidential, even from us. Your data, your control, always invisible.",
+      question: "Your Privacy, Our Protocol: How UCARD Secures Your Data",
+      answer: "UCARD is engineered from the ground up to be the most secure and private card wallet on Ethereum. We leverage advanced virtual card rails and encrypted card-issuance to encrypt your transaction amounts, balances, and even the links to your main wallet. This means your financial activity remains completely confidential, even from us. Your data, your control, always invisible.",
     },
     {
       icon: "ph:robot-bold",
       question: "AI Agents: Autonomy Meets Confidentiality",
-      answer: "Absolutely. USDP is purpose-built for the burgeoning agentic economy. Our platform empowers AI agents to operate with full autonomy, making and receiving payments, interacting with protocols, and executing complex strategies — all while maintaining complete financial confidentiality. With USDP, your AI agents gain the strategic advantage of privacy, ensuring their operations remain secure and untraceable on Base.",
+      answer: "Absolutely. UCARD is purpose-built for the burgeoning membership economy. Our platform empowers cardholders to operate with full autonomy, making and receiving payments, interacting with protocols, and executing complex strategies — all while maintaining complete financial confidentiality. With UCARD, your cardholders gain the strategic advantage of privacy, ensuring their operations remain secure and untraceable on Ethereum.",
     },
     {
       icon: "ph:question-bold",
-      question: "Built on Base: The Secure Foundation for Web4 Finance",
-      answer: "USDP proudly operates on Base, Ethereum's leading Layer 2. This strategic choice provides our users and AI agents with unparalleled transaction speed, minimal fees, and the robust security of the Ethereum network. By leveraging Base, USDP ensures that confidential payments for the Web4 economy are not only private but also efficient, scalable, and future-proof.",
+      question: "Built on Ethereum: The Secure Foundation for Onchain Finance",
+      answer: "UCARD proudly operates on Ethereum, Ethereum mainnet. This strategic choice provides our users and cardholders with unparalleled transaction speed, minimal fees, and the robust security of the Ethereum network. By leveraging Base, UCARD ensures that confidential payments for the onchain card economy are not only private but also efficient, scalable, and future-proof.",
     },
   ];
 
@@ -61,7 +61,7 @@ const FAQSection = () => {
           >
           <h2 className="display-section font-serif text-foreground">
               Deep Dive into{" "}
-              <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>USDP</em>
+              <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>UCARD</em>
             </h2>
           </motion.div>
         </div>
@@ -123,7 +123,7 @@ const FAQSection = () => {
         >
            <p className="text-muted-foreground/60 text-sm">
              Still have questions? Reach out to us on{" "}
-             <a href="https://x.com/UsdpBase" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline">
+             <a href="https://x.com/unicard" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline">
                Twitter
              </a>
            </p>

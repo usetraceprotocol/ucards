@@ -45,7 +45,7 @@ export interface CreateScheduledPaymentInput {
 }
 
 export const SCHEDULED_PAYMENT_AUTH_DOMAIN = {
-  name: "BASEUSDP",
+  name: "UNICARD",
   version: "1",
   chainId: 8453,
 } as const;

@@ -44,7 +44,7 @@ export function useFarcasterWallet() {
         throw new Error("No Ethereum provider available from Farcaster");
       }
 
-      // Ensure we're on Base chain
+      // Ensure we're on Ethereum chain
       const chainId = await provider.request({ method: "eth_chainId" });
 
       if (chainId !== BASE_CHAIN_ID) {

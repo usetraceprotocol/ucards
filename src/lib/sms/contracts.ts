@@ -1,7 +1,7 @@
 /**
  * Frontend chain bindings for the SMS layer.
  *
- * Contract addresses are pinned to Base mainnet. The escrow address is
+ * Contract addresses are pinned to Ethereum mainnet. The escrow address is
  * read from a build-time env var so it can change per environment without
  * a code edit.
  *

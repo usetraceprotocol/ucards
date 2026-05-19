@@ -9,8 +9,8 @@ const TechStackSVG = ({ inverted = false }: { inverted?: boolean }) => {
   const layers = [
     { y: 30, label: "Agent Layer", width: 260 },
     { y: 65, label: "Coordination", width: 220 },
-    { y: 100, label: "x402 Protocol", width: 180 },
-    { y: 135, label: "Base L2", width: 140 },
+    { y: 100, label: "Card-Issuance Protocol", width: 180 },
+    { y: 135, label: "Base", width: 140 },
   ];
 
   return (

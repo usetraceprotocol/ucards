@@ -5,7 +5,7 @@
  * Provides type-safe methods for:
  * - Building unsigned transactions
  * - Submitting signed transactions
- * - Creating and managing x402 payments
+ * - Creating and managing card-issuance payments
  * - Querying balances and accounts
  * 
  * Authentication:
@@ -62,7 +62,7 @@ export interface SubmitTransactionResponse {
   error?: string;
 }
 
-// x402 Payment Types
+// card-issuance Payment Types
 export interface CreatePaymentRequest {
   amount: number;
   recipient: string;
@@ -217,7 +217,7 @@ class ApiClient {
     params: BuildTransferRequest
   ): Promise<BuildTransactionResponse> {
     return this.request<BuildTransactionResponse>(
-      "/api/solana/build-transfer-transaction",
+      "/api/base/build-transfer-transaction",
       {
         method: "POST",
         body: JSON.stringify(params),
@@ -235,7 +235,7 @@ class ApiClient {
     params: BuildPaymentRequest
   ): Promise<BuildTransactionResponse> {
     return this.request<BuildTransactionResponse>(
-      "/api/solana/build-payment-transaction",
+      "/api/base/build-payment-transaction",
       {
         method: "POST",
         body: JSON.stringify(params),
@@ -244,7 +244,7 @@ class ApiClient {
   }
 
   /**
-   * Submit a signed transaction to Solana
+   * Submit a signed transaction to Base
    * 
    * @param params Signed transaction and type
    * @returns Transaction signature and status
@@ -253,7 +253,7 @@ class ApiClient {
     params: SubmitTransactionRequest
   ): Promise<SubmitTransactionResponse> {
     return this.request<SubmitTransactionResponse>(
-      "/api/solana/submit-transaction",
+      "/api/base/submit-transaction",
       {
         method: "POST",
         body: JSON.stringify(params),
@@ -262,11 +262,11 @@ class ApiClient {
   }
 
   // ==========================================================================
-  // x402 Payment Endpoints
+  // card-issuance Payment Endpoints
   // ==========================================================================
 
   /**
-   * Create a new x402 payment request
+   * Create a new card-issuance payment request
    * 
    * @param params Payment request parameters
    * @returns Payment response with ID and hash
@@ -281,7 +281,7 @@ class ApiClient {
   }
 
   /**
-   * Verify an x402 payment
+   * Verify an card-issuance payment
    * 
    * @param paymentId Payment ID
    * @param encryptedAmount Encrypted amount (for verification)
@@ -326,7 +326,7 @@ class ApiClient {
     tokenAccountAddress?: string;
     error?: string;
   }> {
-    return this.request(`/api/solana/balance/${address}`);
+    return this.request(`/api/base/balance/${address}`);
   }
 
   /**
@@ -337,7 +337,7 @@ class ApiClient {
    */
   async validateAddress(address: string): Promise<ValidateAddressResponse> {
     return this.request<ValidateAddressResponse>(
-      `/api/solana/validate-address/${address}`
+      `/api/base/validate-address/${address}`
     );
   }
 
@@ -349,7 +349,7 @@ class ApiClient {
    */
   async getTokenAccount(address: string): Promise<TokenAccountResponse> {
     return this.request<TokenAccountResponse>(
-      `/api/solana/token-account/${address}`
+      `/api/base/token-account/${address}`
     );
   }
 
@@ -520,7 +520,7 @@ export const getZKBalance = async (
 };
 
 // ==========================================================================
-// ZK x402 Payment Endpoints
+// ZK card-issuance Payment Endpoints
 // ==========================================================================
 
 export interface ZKX402CreateRequest {
@@ -559,19 +559,19 @@ export interface ZKX402SettleResponse {
 }
 
 /**
- * Create ZK x402 payment request
+ * Create ZK card-issuance payment request
  */
 export const createZKX402Payment = async (
   params: ZKX402CreateRequest
 ): Promise<ZKX402CreateResponse> => {
-  return api.request<ZKX402CreateResponse>("/api/zk-x402/create", {
+  return api.request<ZKX402CreateResponse>("/api/zk-card-issuance/create", {
     method: "POST",
     body: JSON.stringify(params),
   });
 };
 
 /**
- * Settle ZK x402 payment (simplified - just sign message)
+ * Settle ZK card-issuance payment (simplified - just sign message)
  */
 export const settleZKX402PaymentSimple = async (
   paymentId: string,
@@ -579,7 +579,7 @@ export const settleZKX402PaymentSimple = async (
   walletSignature: string,
   messageToSign: string
 ): Promise<ZKX402SettleResponse> => {
-  return api.request<ZKX402SettleResponse>("/api/zk-x402/settle-simple", {
+  return api.request<ZKX402SettleResponse>("/api/zk-card-issuance/settle-simple", {
     method: "POST",
     body: JSON.stringify({
       paymentId,
@@ -591,12 +591,12 @@ export const settleZKX402PaymentSimple = async (
 };
 
 /**
- * Settle ZK x402 payment (full - with proof data)
+ * Settle ZK card-issuance payment (full - with proof data)
  */
 export const settleZKX402Payment = async (
   params: ZKX402SettleRequest
 ): Promise<ZKX402SettleResponse> => {
-  return api.request<ZKX402SettleResponse>("/api/zk-x402/settle", {
+  return api.request<ZKX402SettleResponse>("/api/zk-card-issuance/settle", {
     method: "POST",
     body: JSON.stringify(params),
   });
@@ -778,7 +778,7 @@ export interface AgentSpendingLogEntry {
 }
 
 /**
- * Register a new AI agent
+ * Register a new cardholder
  */
 export const registerAgent = async (
   wallet: string,

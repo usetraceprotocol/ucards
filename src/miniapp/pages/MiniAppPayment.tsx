@@ -67,7 +67,7 @@ export default function MiniAppPayment() {
 
     try {
       const nonce = Date.now();
-      const messageToSign = `BASEUSDP Payment: ${payment.amount} ${payment.token || "USDC"} | Payment: ${id} | Nonce: ${nonce}`;
+      const messageToSign = `UNICARD Payment: ${payment.amount} ${payment.token || "USDC"} | Payment: ${id} | Nonce: ${nonce}`;
 
       const accounts = await provider.request({ method: "eth_accounts" });
       const senderAddress = accounts[0] || walletAddress;

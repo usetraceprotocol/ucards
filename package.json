@@ -1,7 +1,8 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "unicard",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Private virtual cards for the onchain economy. NFT-gated card issuance on Ethereum.",
   "type": "module",
   "scripts": {
     "predev": "node scripts/copy-veil-keys.mjs",

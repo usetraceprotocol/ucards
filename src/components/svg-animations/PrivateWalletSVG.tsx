@@ -47,7 +47,7 @@ const PrivateWalletSVG = ({ inverted = false }: { inverted?: boolean }) => {
 
         {/* Card holder */}
         <text x="62" y="120" fill={inverted ? "hsl(0 0% 0% / 0.3)" : "hsl(0 0% 100% / 0.25)"} fontSize="7" fontFamily="monospace" letterSpacing="1">
-          USDP PRIVATE
+          UCARD PRIVATE
         </text>
 
         {/* Expiry */}

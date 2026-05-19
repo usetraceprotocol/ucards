@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 
-export type TransactionFilter = "all" | "sent" | "received" | "x402" | "transfer";
+export type TransactionFilter = "all" | "sent" | "received" | "card-issuance" | "transfer";
 export type SortOption = "date_desc" | "date_asc" | "amount_desc" | "amount_asc";
 
 interface TransactionFiltersProps {

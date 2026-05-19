@@ -6,37 +6,37 @@ const WhitepaperSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const PDF_HREF = "/BASEUSDP-Whitepaper.pdf";
+  const PDF_HREF = "/UNICARD-Whitepaper.pdf";
 
   const layers = [
     {
       icon: "ph:cube-bold",
       label: "01",
       title: "Settlement",
-      body: "Base L2 with native USDC and a small suite of audited Solidity contracts. No proprietary token, no rebasing wrapper.",
+      body: "Base with native USDC and a small suite of audited Solidity contracts. No proprietary token, no rebasing wrapper.",
       color: "var(--beam-cyan)",
     },
     {
       icon: "ph:shield-check-bold",
       label: "02",
       title: "Privacy",
-      body: "An FHE-encrypted token for confidential balances and a ZK shielded pool for unlinkable transfers. Three privacy levels per transaction.",
+      body: "An encrypted token for confidential balances and a ZK shielded pool for unlinkable transfers. Three privacy levels per transaction.",
       color: "var(--beam-violet)",
     },
     {
       icon: "ph:graph-bold",
       label: "03",
       title: "Channels",
-      body: "Direct, x402, SMS, Farcaster, Twitter, and an AI Terminal, all five surfaces settle against the same pool with the same guarantees.",
+      body: "Direct, card-issuance, SMS, Farcaster, Twitter, and an AI Terminal, all five surfaces settle against the same pool with the same guarantees.",
       color: "var(--beam-green)",
     },
   ];
 
   const channels = [
     { icon: "ph:wallet-bold", label: "Direct", desc: "Wallet or @username" },
-    { icon: "ph:globe-bold", label: "x402", desc: "HTTP 402 for browsers and agents" },
+    { icon: "ph:globe-bold", label: "card-issuance", desc: "HTTP 402 for browsers and agents" },
     { icon: "ph:device-mobile-bold", label: "SMS", desc: "Any phone, offline-capable" },
-    { icon: "ph:broadcast-bold", label: "Farcaster", desc: "Mini App + @baseusdp bot" },
+    { icon: "ph:broadcast-bold", label: "Farcaster", desc: "Mini App + @unicard bot" },
     { icon: "ph:chat-circle-bold", label: "Twitter / X", desc: "Tweet or DM the bot" },
   ];
 
@@ -67,7 +67,7 @@ const WhitepaperSection = () => {
   const chapters = [
     "Privacy primitives, FHE & ZK proofs",
     "The smart contract suite",
-    "x402 HTTP-native payments",
+    "card-issuance HTTP-native payments",
     "SMS & offline payment layer",
     "Autonomous agents & ERC-8004 identity",
     "Security model and trust assumptions",
@@ -123,7 +123,7 @@ const WhitepaperSection = () => {
             <div className="flex flex-wrap items-center gap-4">
               <motion.a
                 href={PDF_HREF}
-                download="BASEUSDP-Whitepaper.pdf"
+                download="UNICARD-Whitepaper.pdf"
                 className="flex items-center gap-3 bg-foreground text-background rounded-full px-6 py-3.5 text-sm font-semibold hover:bg-foreground/90 transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -143,8 +143,8 @@ const WhitepaperSection = () => {
               </a>
             </div>
             <p className="text-base text-muted-foreground leading-relaxed">
-              A digest of how BASEUSDP turns Base into a private settlement
-              layer for humans, AI agents, and the open web.
+              A digest of how UNICARD turns Base into a private settlement
+              layer for humans, cardholders, and the open web.
             </p>
           </motion.div>
         </div>
@@ -160,23 +160,23 @@ const WhitepaperSection = () => {
             Abstract
           </p>
           <p className="text-xl md:text-2xl font-serif text-foreground/90 leading-relaxed">
-            BASEUSDP combines an{" "}
+            UNICARD combines an{" "}
             <span className="text-foreground font-medium">
-              FHE-encrypted USDC token
+              encrypted USDC token
             </span>
             , a{" "}
             <span className="text-foreground font-medium">
-              zero-knowledge privacy pool
+              private spending pool
             </span>
             , an{" "}
-            <span className="text-foreground font-medium">x402 facilitator</span>
+            <span className="text-foreground font-medium">card facilitator</span>
             , and an{" "}
             <span className="text-foreground font-medium">
               ERC-8004 agent identity layer
             </span>{" "}
-            into a single product that lets humans and autonomous agents move
+            into a single product that lets humans and cardholders move
             USDC privately across wallets, phone numbers, social handles, and
-            HTTP endpoints, all settling on Base.
+            HTTP endpoints, all settling on Ethereum.
           </p>
         </motion.div>
 

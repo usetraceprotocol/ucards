@@ -13,7 +13,7 @@
 import { postSmsSend, type SmsSendPayload } from "@/services/smsService";
 import type { QueuedSend, SmsSendResult } from "./types";
 
-const STORAGE_KEY = "baseusdp:sms:queue:v1";
+const STORAGE_KEY = "unicard:sms:queue:v1";
 
 function readQueue(): QueuedSend[] {
   if (typeof window === "undefined") return [];

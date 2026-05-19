@@ -14,7 +14,7 @@ const features = [
     tag: "Privacy",
     stat: "256-bit",
     statLabel: "Encryption",
-    description: "View and manage your balances with ZK Proof encryption. Only you can see your true holdings — fully hidden on-chain.",
+    description: "View and manage your balances with Encrypted encryption. Only you can see your true holdings — fully hidden on-chain.",
   },
   {
     id: "payments",
@@ -57,7 +57,7 @@ function BalancePreview() {
           <div className="text-lg font-semibold text-emerald-400">Full</div>
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <Icon icon="ph:lock-bold" className="w-3 h-3" />
-            ZK Protected
+            Encrypted
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@ const FeaturesSection = () => {
                       </div>
                       <div className="flex-1 flex justify-center">
                         <div className="px-3 py-0.5 rounded-md bg-secondary text-[10px] text-muted-foreground font-mono">
-                          baseusdp.app/dashboard
+                          unicard.app/dashboard
                         </div>
                       </div>
                     </div>

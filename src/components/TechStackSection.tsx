@@ -44,7 +44,7 @@ const TechStackSection = () => {
       icon: "ph:cube-bold",
       label: "05",
       name: "Blockchain Layer",
-      description: "Cryptographic settlement on Base",
+      description: "Cryptographic settlement on Ethereum",
       metrics: ["12.4M blocks", "2s finality", "100 validators"],
       color: "var(--beam-green)",
     },
@@ -52,8 +52,8 @@ const TechStackSection = () => {
 
   const techStack = [
     { icon: "simple-icons:coinbase", name: "Base", role: "Blockchain Layer" },
-    { icon: "ph:shield-check-fill", name: "ZK Proofs", role: "Privacy Layer" },
-    { icon: "ph:currency-dollar-fill", name: "x402", role: "Payment Standard" },
+    { icon: "ph:shield-check-fill", name: "Virtual Card Proofs", role: "Privacy Layer" },
+    { icon: "ph:currency-dollar-fill", name: "card-issuance", role: "Payment Standard" },
     { icon: "simple-icons:solidity", name: "Solidity", role: "Smart Contracts" },
     { icon: "simple-icons:typescript", name: "TypeScript", role: "Backend" },
     { icon: "simple-icons:react", name: "React + Vite", role: "Frontend" },
@@ -80,7 +80,7 @@ const TechStackSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <h2 className="display-section font-serif text-foreground">
-              Web4 Privacy{" "}
+              Onchain Privacy{" "}
               <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Infrastructure</em>
             </h2>
           </motion.div>
@@ -91,7 +91,7 @@ const TechStackSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <p className="text-base text-muted-foreground leading-relaxed">
-              Five architectural layers engineered for the Web4 agentic economy — delivering end-to-end encrypted, autonomous transactions at scale.
+              Five architectural layers engineered for the onchain card economy — delivering end-to-end encrypted, autonomous transactions at scale.
             </p>
           </motion.div>
         </div>

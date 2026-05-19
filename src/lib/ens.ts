@@ -16,7 +16,7 @@ import { base, mainnet } from "viem/chains";
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 const CACHE_KEY_PREFIX = "ens_resolve_v1_";
 
-// Coinbase's Universal Resolver on Base for Basenames reverse lookups.
+// Coinbase's Universal Resolver on Ethereum for Basenames reverse lookups.
 // Viem may or may not have this baked into its `base` chain definition
 // depending on version, so we pass it explicitly.
 const BASE_UNIVERSAL_RESOLVER =
@@ -70,7 +70,7 @@ async function lookup(address: `0x${string}`): Promise<string | null> {
     // Network error / no primary set — fall through.
   }
 
-  // Then try Basenames directly on Base.
+  // Then try Basenames directly on Ethereum.
   try {
     const baseName = await baseClient.getEnsName({
       address,

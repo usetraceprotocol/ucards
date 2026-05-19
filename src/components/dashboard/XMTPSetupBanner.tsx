@@ -12,7 +12,7 @@ const XMTPSetupBanner = () => {
   const { activeChain } = useWallet();
   const { isInitializing, initError, initializeXMTP } = useXMTP();
 
-  // Solana-only wallets can't use XMTP
+  // Base-only wallets can't use XMTP
   if (activeChain !== "base") {
     return (
       <motion.div
@@ -23,7 +23,7 @@ const XMTPSetupBanner = () => {
         <AlertCircle className="w-8 h-8 text-yellow-500/60 mx-auto mb-3" />
         <h3 className="text-sm font-semibold text-white/80 mb-1">EVM Wallet Required</h3>
         <p className="text-xs text-white/40">
-          Encrypted messaging requires an EVM wallet (MetaMask or Phantom on Base).
+          Encrypted messaging requires an EVM wallet (MetaMask or Phantom on Ethereum).
           Switch to an EVM wallet to enable messaging.
         </p>
       </motion.div>

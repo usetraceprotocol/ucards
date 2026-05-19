@@ -79,7 +79,7 @@ const FarcasterAutoCastSettings = () => {
         <div className="rounded-xl bg-primary/5 border border-primary/20 p-4 text-sm">
           <p className="font-medium mb-1">No Farcaster account linked yet</p>
           <p className="text-muted-foreground text-xs leading-relaxed">
-            Open the BASEUSDP mini-app inside Warpcast at least once to link your
+            Open the UNICARD mini-app inside Warpcast at least once to link your
             FID to this wallet. After that, this section will let you toggle
             auto-casts on.
           </p>
@@ -88,7 +88,7 @@ const FarcasterAutoCastSettings = () => {
         <div className="space-y-4">
           <ToggleRow
             label="Auto-cast enabled"
-            description={`Posts from @baseusdp mentioning @${settings.farcaster_username}.`}
+            description={`Posts from @unicard mentioning @${settings.farcaster_username}.`}
             value={settings.enabled}
             busy={busyKey === "enabled"}
             onChange={(v) => apply("enabled", v)}
@@ -123,7 +123,7 @@ const FarcasterAutoCastSettings = () => {
                 <p className="font-mono">
                   @{settings.farcaster_username} just shielded
                   {settings.include_amount ? " $X.XX USDC" : ""} a private
-                  deposit on Base via @baseusdp 🛡️
+                  deposit on Ethereum via @unicard 🛡️
                 </p>
               </div>
             </div>

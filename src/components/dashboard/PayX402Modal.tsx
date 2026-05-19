@@ -56,7 +56,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
           serviceName: "Payment Request",
           amount: "0.00", // Amount would come from the payment metadata
           payee: "Recipient",
-          description: "x402 Payment",
+          description: "card-issuance Payment",
           status: result.payment.status === "settled" ? "paid" : result.payment.status === "failed" ? "expired" : result.payment.status as "expired" | "paid" | "pending",
         });
         setStep("review");
@@ -124,7 +124,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
       }
 
       // Create message to sign
-      const message = `Authorize USDP x402 payment:\nPayment ID: ${paymentDetails.id}\nAmount: ${paymentDetails.amount} USDC\nTimestamp: ${Date.now()}`;
+      const message = `Authorize UCARD card-issuance payment:\nPayment ID: ${paymentDetails.id}\nAmount: ${paymentDetails.amount} USDC\nTimestamp: ${Date.now()}`;
       
       // Sign message with wallet (EVM signing for Base chain)
       let walletSignature: string;
@@ -154,7 +154,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
         throw signError;
       }
 
-      // Execute ZK x402 payment settlement
+      // Execute ZK card-issuance payment settlement
       setStep("pending");
       const result = await settleZKX402PaymentSimple(
         paymentDetails.id,
@@ -198,7 +198,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
             <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center">
               <CreditCard className="w-4 h-4 text-accent" />
             </div>
-            {step === "input" && "Pay x402 Request"}
+            {step === "input" && "Pay card-issuance Request"}
             {step === "loading" && "Looking up payment..."}
             {step === "review" && "Review Payment"}
             {(step === "signing" || step === "pending") && "Processing Payment"}
@@ -243,7 +243,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
 
               <div className="rounded-xl bg-primary/5 border border-primary/20 p-4">
                 <p className="text-sm text-muted-foreground">
-                  Enter the payment request ID or paste a payment link to pay an x402 request.
+                  Enter the payment request ID or paste a payment link to pay an card-issuance request.
                 </p>
               </div>
 
@@ -355,7 +355,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
               <p className="text-muted-foreground text-sm">
                 {step === "signing" 
                   ? "Please confirm the transaction in your wallet" 
-                  : "Settling x402 payment on-chain"}
+                  : "Settling card-issuance payment on-chain"}
               </p>
 
               <div className="flex justify-center gap-2 mt-6">
@@ -386,7 +386,7 @@ const PayX402Modal = ({ open, onOpenChange }: PayX402ModalProps) => {
               
               <h3 className="text-lg font-bold mb-2">Payment Successful!</h3>
               <p className="text-muted-foreground text-sm mb-6">
-                Your x402 payment has been settled
+                Your card-issuance payment has been settled
               </p>
 
               <div className="rounded-xl bg-secondary p-4 mb-6">

@@ -8,7 +8,7 @@
  * transfer flow handles the actual payment server-side.
  *
  * Trade-off (deliberate, see tech_updates.md #8): only signed-in
- * BASEUSDP visitors can tip in v1. External-wallet tipping requires
+ * UNICARD visitors can tip in v1. External-wallet tipping requires
  * exposing the recipient's address, which is a v2 opt-in decision.
  */
 
@@ -86,7 +86,7 @@ const Tip = () => {
   const tipUrl =
     typeof window !== "undefined"
       ? window.location.href
-      : `https://baseusdp.com/tip/@${cleanHandle}`;
+      : `https://unicard.com/tip/@${cleanHandle}`;
 
   const amountNum = parseFloat(amount || "0");
   const canSubmit = !!profile && amountNum > 0;
@@ -127,7 +127,7 @@ const Tip = () => {
               to="/"
               className="text-xs text-muted-foreground underline-offset-2 hover:underline"
             >
-              baseusdp.com
+              unicard.com
             </Link>
           </div>
 
@@ -145,7 +145,7 @@ const Tip = () => {
                 Handle not found
               </div>
               <p className="text-xs">
-                @{cleanHandle || "—"} doesn't exist on BASEUSDP yet.
+                @{cleanHandle || "—"} doesn't exist on UNICARD yet.
               </p>
               <Link
                 to="/dashboard"
@@ -177,7 +177,7 @@ const Tip = () => {
                     @{profile.username}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    accepts tips on BASEUSDP
+                    accepts tips on UNICARD
                   </div>
                 </div>
               </div>
@@ -242,8 +242,8 @@ const Tip = () => {
               </button>
 
               <p className="mb-4 text-center text-[10px] leading-relaxed text-muted-foreground">
-                Tips route through BASEUSDP's internal transfer — recipient
-                address is never exposed. You'll need to sign in to BASEUSDP
+                Tips route through UNICARD's internal transfer — recipient
+                address is never exposed. You'll need to sign in to UNICARD
                 to complete the tip.
               </p>
 
@@ -273,7 +273,7 @@ const Tip = () => {
         </div>
 
         <p className="mt-4 text-center text-[10px] text-muted-foreground">
-          Powered by BASEUSDP · USDC settles encrypted on the recipient's side
+          Powered by UNICARD · USDC settles encrypted on the recipient's side
         </p>
       </div>
     </div>

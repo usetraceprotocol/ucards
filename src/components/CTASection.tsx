@@ -44,9 +44,9 @@ const CTASection = () => {
                 letterSpacing: "-0.03em",
               }}
             >
-              Launch Your
+              Mint Your
               <br />
-              <em>Private Wallet</em>
+              <em>Membership Card</em>
             </motion.h2>
 
             <motion.div
@@ -56,7 +56,7 @@ const CTASection = () => {
               className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
             >
               <p className="text-base text-background/40 max-w-sm leading-relaxed">
-                The future of autonomous commerce is here, and it demands privacy. USDP empowers you and your AI agents to transact with complete confidentiality on Base. Step into the Web4 era with the ultimate private agentic wallet.
+                Hold 100+ $UCARD, mint your membership NFT, and unlock unlimited private virtual cards. Spend stablecoins anywhere Visa and Mastercard are accepted — your wallet stays private, your card looks like any other.
               </p>
               <div className="flex items-center gap-6 shrink-0">
                 <motion.button
@@ -75,7 +75,7 @@ const CTASection = () => {
                   onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
                   className="text-sm text-background/40 hover:text-background/70 transition-colors underline underline-offset-4"
                 >
-                  Learn More About USDP
+                  Learn More About UCARD
                 </a>
               </div>
             </motion.div>

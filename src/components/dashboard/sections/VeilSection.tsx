@@ -148,7 +148,7 @@ const VeilSection = ({ showBalance }: VeilSectionProps) => {
             </span>
           </div>
           <p className="text-muted-foreground mt-1">
-            A second private USDC route, powered by veil.cash on Base. Separate
+            A second private USDC route, powered by veil.cash on Ethereum. Separate
             pool, separate anonymity set, same wallet.
           </p>
         </div>
@@ -225,7 +225,7 @@ const VeilSection = ({ showBalance }: VeilSectionProps) => {
             Veil's entry contract only accepts deposits from pre-verified
             wallets — any attempt from an unverified address reverts on-chain.
             Verify once (free, ~2 min) with one of the providers below; the
-            attestation lands on Base and deposits unlock right after.
+            attestation lands on Ethereum and deposits unlock right after.
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             <a

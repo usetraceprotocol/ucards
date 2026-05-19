@@ -1,8 +1,8 @@
 /**
  * X402 Deposit Page
- * Standalone page for x402 Base USDC deposits via Phantom EVM
+ * Standalone page for card-issuance Base USDC deposits via Phantom EVM
  * 
- * URL format: /x402-deposit?depositAddress=0x...&amount=100&depositId=...
+ * URL format: /card-issuance-deposit?depositAddress=0x...&amount=100&depositId=...
  */
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -78,7 +78,7 @@ const X402Deposit = () => {
         throw new Error("No Ethereum accounts found in Phantom.");
       }
 
-      console.log("[x402] Connected to Phantom EVM:", accounts[0]);
+      console.log("[card-issuance] Connected to Phantom EVM:", accounts[0]);
       updateStep("connect", "done");
 
       // Step 2: Switch to Base network
@@ -110,7 +110,7 @@ const X402Deposit = () => {
         }
       }
 
-      console.log("[x402] Switched to Base network");
+      console.log("[card-issuance] Switched to Base network");
       updateStep("network", "done");
 
       // Step 3: Build ERC-20 transfer calldata and send
@@ -122,7 +122,7 @@ const X402Deposit = () => {
       const toClean = depositAddress.toLowerCase().replace("0x", "").padStart(64, "0");
       const transferData = "0xa9059cbb" + toClean + amountHex;
 
-      console.log("[x402] Sending transfer:", {
+      console.log("[card-issuance] Sending transfer:", {
         from: accounts[0],
         to: BASE_USDC_ADDRESS,
         data: transferData,
@@ -140,7 +140,7 @@ const X402Deposit = () => {
         ],
       });
 
-      console.log("[x402] Transaction sent:", hash);
+      console.log("[card-issuance] Transaction sent:", hash);
       updateStep("approve", "done");
 
       // Step 4: Confirmed
@@ -150,7 +150,7 @@ const X402Deposit = () => {
       setShowSpinner(false);
     } catch (err: any) {
       const msg = err.message || "Transaction failed. Please try again.";
-      console.error("[x402] Error:", msg);
+      console.error("[card-issuance] Error:", msg);
       setErrorMessage(msg);
       setShowSpinner(false);
 
@@ -176,7 +176,7 @@ const X402Deposit = () => {
           <h1 className="text-[22px] font-bold tracking-tight">
             <span className="text-violet-500">Void</span>402
           </h1>
-          <p className="text-[13px] text-zinc-400 mt-1">x402 Base USDC Transfer</p>
+          <p className="text-[13px] text-zinc-400 mt-1">card-issuance Base USDC Transfer</p>
         </div>
 
         {/* Deposit Info Card */}
@@ -290,10 +290,10 @@ const X402Deposit = () => {
 
         {isSuccess && (
           <a
-            href={`void402://x402-sent?depositId=${depositId}&txHash=${txHash}`}
+            href={`void402://card-issuance-sent?depositId=${depositId}&txHash=${txHash}`}
             className="block w-full py-3.5 rounded-xl text-[15px] font-semibold text-zinc-100 mt-3 text-center border border-white/10 hover:bg-white/5 transition-all"
           >
-            Return to USDP
+            Return to UCARD
           </a>
         )}
       </div>

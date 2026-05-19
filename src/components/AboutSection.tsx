@@ -15,7 +15,7 @@ const AboutSection = () => {
         transition={{ duration: 0.6 }}
         className="mb-12"
       >
-        <span className="tag-pill">About USDP</span>
+        <span className="tag-pill">About UCARD</span>
       </motion.div>
 
       <div className="grid md:grid-cols-12 gap-10 items-start mb-20">
@@ -71,7 +71,7 @@ const AboutSection = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  A world where financial privacy is a fundamental right, not a privilege. Where individuals, institutions, and AI agents can transact freely without sacrificing confidentiality or compliance.
+                  A world where financial privacy is a fundamental right, not a privilege. Where individuals, institutions, and cardholders can transact freely without sacrificing confidentiality or compliance.
                 </p>
               </div>
               <div className="flex items-center gap-4 mt-8">
@@ -119,7 +119,7 @@ const AboutSection = () => {
           Public blockchains promised a revolution in peer-to-peer finance, but their inherent transparency created a critical barrier to mainstream adoption. For institutions, enterprises, and any entity that values financial privacy, broadcasting every transaction to the world is not just a risk — it's a non-starter.
         </p>
         <p className="text-foreground font-medium leading-relaxed">
-          USDP was created to solve this fundamental problem — and to power the Web4 economy. By integrating cutting-edge Zero-Knowledge Proofs (ZKPs) with the internet-native x402 payment standard, we have created the world's first confidential payment layer for the autonomous internet economy. Autonomous by design. Invisible by default.
+          UCARD was created to solve this fundamental problem — and to power the onchain card economy. By integrating cutting-edge virtual card rails with the internet-native Visa & Mastercard rails, we have created the world's first confidential payment layer for the onchain card economy. Autonomous by design. Invisible by default.
         </p>
       </motion.div>
     </section>

@@ -92,7 +92,7 @@ const SwapSection = ({ showBalance }: SwapSectionProps) => {
           Token Swap<span className="text-primary">.</span>
         </h1>
         <p className="text-muted-foreground mt-1">
-          Swap tokens on Base — powered by Clawncher
+          Swap tokens on Ethereum — powered by Clawncher
         </p>
       </div>
 
@@ -194,7 +194,7 @@ const SwapSection = ({ showBalance }: SwapSectionProps) => {
               </div>
 
               {/* Flip Button — disabled when the receive token isn't sellable
-                  (e.g. USDP) so users can't flip a buy-only token onto the
+                  (e.g. UCARD) so users can't flip a buy-only token onto the
                   sell side. */}
               <div className="flex justify-center -my-2 relative z-10">
                 <button
@@ -403,7 +403,7 @@ const SwapSection = ({ showBalance }: SwapSectionProps) => {
                 className="text-xs text-center"
                 style={{ color: "var(--dash-text-faint)" }}
               >
-                Swaps are executed directly on Base via Clawncher (0x
+                Swaps are executed directly on Ethereum via Clawncher (0x
                 aggregation). Not connected to privacy pools.
               </p>
             </motion.div>

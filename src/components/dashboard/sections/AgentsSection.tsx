@@ -229,7 +229,7 @@ const AgentsSection = () => {
             <Icon icon="ph:arrow-left-bold" className="w-4 h-4" /> Back to Agents
           </button>
           <h1 className="font-display text-3xl font-bold">Register Agent<span className="text-primary">.</span></h1>
-          <p className="text-muted-foreground mt-1">Create a new AI agent that can transact on your behalf</p>
+          <p className="text-muted-foreground mt-1">Create a new cardholder that can transact on your behalf</p>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-border bg-card p-6 space-y-4">
@@ -493,7 +493,7 @@ const AgentsSection = () => {
                 <span className="text-[10px] bg-muted px-1.5 py-0.5 rounded-full text-muted-foreground">Soon</span>
               </div>
               <p className="text-xs text-muted-foreground mb-2">
-                Provision a Coinbase smart wallet for gasless transactions on Base.
+                Provision a Coinbase smart wallet for gasless transactions on Ethereum.
               </p>
               <Button
                 size="sm"
@@ -629,7 +629,7 @@ const AgentsSection = () => {
 
   // Docs View
   if (view === "docs") {
-    const baseUrl = "https://www.baseusdp.com";
+    const baseUrl = "https://www.unicard.com";
     const steps = [
       {
         num: 1,
@@ -755,7 +755,7 @@ const AgentsSection = () => {
             Agents<span className="text-primary">.</span>
           </h1>
           <p className="text-muted-foreground mt-1">
-            Manage AI agents with programmatic access to your private wallet
+            Manage cardholders with programmatic access to your private wallet
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -781,7 +781,7 @@ const AgentsSection = () => {
           <Icon icon="ph:robot-bold" className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
           <h3 className="font-display text-xl font-bold mb-2">No Agents Yet</h3>
           <p className="text-muted-foreground mb-6">
-            Create your first AI agent to enable programmatic transfers with spending controls.
+            Create your first cardholder to enable programmatic transfers with spending controls.
           </p>
           <Button onClick={() => setView("register")} className="bg-primary hover:bg-primary/90">
             <Icon icon="ph:robot-bold" className="w-4 h-4 mr-2" /> Register Your First Agent

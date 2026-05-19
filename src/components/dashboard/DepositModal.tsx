@@ -12,7 +12,7 @@
  * X402 flow (Base USDC deposit):
  * 1. User signs a message with Phantom to verify wallet ownership
  * 2. Backend creates deposit record & returns Base deposit address
- * 3. User sends USDC on Base to the deposit address
+ * 3. User sends USDC on Ethereum to the deposit address
  * 4. Backend detects the transfer, bridges via ChangeNow, credits balance
  */
 
@@ -100,7 +100,7 @@ const DepositModal = ({ open, onOpenChange, initialAmount, initialToken }: Depos
   const [processedExchanges, setProcessedExchanges] = useState(0);
   const [totalExchanges, setTotalExchanges] = useState(0);
 
-  // (x402 state removed — only standard USDC/USDT deposits now)
+  // (card-issuance state removed — only standard USDC/USDT deposits now)
 
   // Polling refs
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -197,7 +197,7 @@ const DepositModal = ({ open, onOpenChange, initialAmount, initialToken }: Depos
   };
 
   /**
-   * Handle Base chain deposit (EVM) — uses the same holding-wallet privacy pipeline as Solana
+   * Handle Base chain deposit (EVM) — uses the same holding-wallet privacy pipeline as Base
    * 1. Create holding wallet -> get evmTransaction
    * 2. User signs ERC20 transfer to holding wallet (single tx, no approve needed)
    * 3. Poll auto-split-and-exchange (wait for funds + split)
@@ -618,7 +618,7 @@ const DepositModal = ({ open, onOpenChange, initialAmount, initialToken }: Depos
       }
       signedBase64 = btoa(signedBase64);
 
-      const submitResponse = await fetch(`${apiUrl}/api/solana/submit-transaction`, {
+      const submitResponse = await fetch(`${apiUrl}/api/base/submit-transaction`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -58,9 +58,9 @@ const VeilEntryCard = () => {
           className="mt-3 max-w-2xl text-sm leading-relaxed"
           style={{ color: "var(--dash-text-muted)" }}
         >
-          Veil Cash is an open privacy pool on Base. Your USDC settles into
+          Veil Cash is an open privacy pool on Ethereum. Your USDC settles into
           the same anonymity set as every other Veil depositor — bigger crowd,
-          better privacy. The BASEUSDP pool stays available alongside it; this
+          better privacy. The UNICARD pool stays available alongside it; this
           tab is a separate route, not a replacement.
         </p>
 

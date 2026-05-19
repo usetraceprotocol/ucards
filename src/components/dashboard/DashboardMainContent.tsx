@@ -129,7 +129,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
             let bgColor = "bg-emerald-500/20";
 
             if (tx.type === "payment") {
-              type = "x402";
+              type = "card-issuance";
               icon = "ph:download-bold";
               color = "text-purple-400";
               bgColor = "bg-purple-500/20";
@@ -235,7 +235,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `usdp_transactions_${new Date().toISOString().split("T")[0]}.csv`;
+      a.download = `opaq_transactions_${new Date().toISOString().split("T")[0]}.csv`;
       a.click();
       URL.revokeObjectURL(url);
     } catch (err) {
@@ -406,7 +406,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
               </div>
               <div className="flex items-center gap-1 justify-end text-xs mt-1" style={{ color: 'var(--dash-text-muted)' }}>
                 <Icon icon="ph:lock-bold" className="w-3 h-3" />
-                ZK Protected
+                Encrypted
               </div>
             </div>
           </div>
@@ -508,7 +508,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
           </motion.div>
         </div>
 
-        {/* BASEUSDP Flywheel */}
+        {/* UNICARD Flywheel */}
         <FlywheelCard />
 
         {/* Onchain badges */}
@@ -555,7 +555,7 @@ const DashboardMainContent = ({ activeTab, setActiveTab, showBalance, setShowBal
                     <div className="text-sm flex items-center gap-1.5" style={{ color: 'var(--dash-text)' }}>
                       {tx.type === "deposit" ? "Deposit" :
                        tx.type === "withdraw" ? "Withdrawal" :
-                       tx.type === "x402" ? <>x402 from <AddressDisplay value={tx.from} unknownLabel="Service" /></> :
+                       tx.type === "card-issuance" ? <>card-issuance from <AddressDisplay value={tx.from} unknownLabel="Service" /></> :
                        tx.direction === "sent" ? <>Sent to <AddressDisplay value={tx.to} /></> :
                        tx.direction === "received" ? <>Received from <AddressDisplay value={tx.from} /></> :
                        `Transfer`}

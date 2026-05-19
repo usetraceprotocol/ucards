@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import usdpLogoWhite from "@/assets/usdp-logo-white.png";
+import usdpLogoWhite from "@/assets/opaq-logo-white.svg";
 import { Icon } from "@iconify/react";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
       { name: "Future Path", href: "#roadmap" },
     ],
     Company: [
-      { name: "About USDP", href: "#about" },
+      { name: "About UCARD", href: "#about" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
@@ -23,9 +23,9 @@ const Footer = () => {
   };
 
   const socialLinks: { name: string; href: string; icon: string; comingSoon?: boolean }[] = [
-     { name: "Twitter", href: "https://x.com/UsdpBase", icon: "simple-icons:twitter" },
-     { name: "GitHub", href: "https://github.com/BaseUsdp/BaseUSDP", icon: "simple-icons:github" },
-     { name: "Telegram", href: "https://t.me/UsdpBase", icon: "simple-icons:telegram" },
+     { name: "Twitter", href: "https://x.com/unicard", icon: "simple-icons:twitter" },
+     { name: "GitHub", href: "https://github.com/BaseUsdp/Unicard", icon: "simple-icons:github" },
+     { name: "Telegram", href: "https://t.me/unicard", icon: "simple-icons:telegram" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -41,11 +41,11 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-8 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
         <div className="col-span-2">
           <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-tighter text-background mb-4">
-            <img src={usdpLogoWhite} alt="USDP" className="w-5 h-5 object-contain" />
-            <span>USDP</span>
+            <img src={usdpLogoWhite} alt="UCARD" className="w-5 h-5 object-contain" />
+            <span>UCARD</span>
           </Link>
           <p className="text-sm text-background/40 leading-relaxed max-w-xs">
-            The Private Agentic Wallet for Web4.
+            The Private Card Wallet for Onchain.
             Autonomous by design. Invisible by default.
           </p>
            <div className="flex items-center gap-3 mt-6">
@@ -111,7 +111,7 @@ const Footer = () => {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-8 pb-8 border-t border-background/10 pt-7 flex items-center justify-between">
-        <p className="text-xs text-background/30">© 2026 BASEUSDP. All rights reserved.</p>
+        <p className="text-xs text-background/30">© 2026 UNICARD. All rights reserved.</p>
         <p className="text-xs text-background/30">Designed with intent.</p>
       </div>
     </footer>

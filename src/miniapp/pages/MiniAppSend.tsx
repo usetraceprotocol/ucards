@@ -20,9 +20,9 @@ import farcasterApi from "../services/farcasterApi";
 type SendStep = "form" | "preview" | "signing" | "encrypting" | "success" | "failed";
 
 interface RecipientInfo {
-  type: "baseusdp" | "farcaster";
+  type: "unicard" | "farcaster";
   username: string;
-  baseusdpUsername?: string;
+  unicardUsername?: string;
   hasDeposited?: boolean;
 }
 
@@ -69,7 +69,7 @@ export default function MiniAppSend() {
     try {
       // Build the transfer request
       const nonce = Date.now();
-      const messageToSign = `BASEUSDP Transfer: ${parsedAmount} ${token} | Nonce: ${nonce}`;
+      const messageToSign = `UNICARD Transfer: ${parsedAmount} ${token} | Nonce: ${nonce}`;
 
       // Sign with Farcaster wallet (lowercase for consistent DB matching)
       const accounts = await provider.request({ method: "eth_accounts" });
@@ -96,12 +96,12 @@ export default function MiniAppSend() {
         message_to_sign: messageToSign,
       };
 
-      // Use BASEUSDP username if available (for internal transfer), otherwise wallet
-      if (recipient.type === "baseusdp" || recipient.baseusdpUsername) {
+      // Use UNICARD username if available (for internal transfer), otherwise wallet
+      if (recipient.type === "unicard" || recipient.unicardUsername) {
         transferParams.recipient_username =
-          recipient.baseusdpUsername || recipient.username;
+          recipient.unicardUsername || recipient.username;
       } else {
-        // For Farcaster users without BASEUSDP account, use their Farcaster username
+        // For Farcaster users without UNICARD account, use their Farcaster username
         // The backend will handle resolution
         transferParams.recipient_username = `fc:${recipient.username}`;
       }
@@ -220,7 +220,7 @@ export default function MiniAppSend() {
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-zinc-400">Privacy</span>
-            <span className="text-green-400">Full (ZK Protected)</span>
+            <span className="text-green-400">Full (Encrypted)</span>
           </div>
         </div>
 

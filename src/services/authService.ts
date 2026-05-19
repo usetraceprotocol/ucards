@@ -1,11 +1,11 @@
 /**
  * Authentication Service
  * Handles wallet-based authentication for ORB402
- * Supports both Solana (ed25519) and EVM/Base (personal_sign) authentication
+ * Supports both Base (ed25519) and EVM/Base (personal_sign) authentication
  *
  * Flow:
  * 1. Get nonce from backend
- * 2. Sign message with wallet (Solana: signMessage, EVM: personal_sign)
+ * 2. Sign message with wallet (Base: signMessage, EVM: personal_sign)
  * 3. Verify signature and get session token
  * 4. Store token in localStorage
  * 5. Include token in API requests
@@ -51,7 +51,7 @@ export interface SessionInfo {
 
 // Chain-aware wallet adapter interface
 export interface WalletAdapter {
-  // Solana fields
+  // Base fields
   publicKey?: { toBase58: () => string } | null;
   signMessage?: (message: Uint8Array) => Promise<Uint8Array>;
   // EVM fields
@@ -59,7 +59,7 @@ export interface WalletAdapter {
   signEVMMessage?: (message: string) => Promise<string>;
   // Common
   connected: boolean;
-  chain?: "solana" | "base";
+  chain?: "base" | "base";
 }
 
 // ============================================================================
@@ -112,7 +112,7 @@ class AuthService {
   /**
    * Get nonce from backend for authentication
    */
-  async getNonce(walletAddress: string, chain: "solana" | "base" = "base"): Promise<NonceResponse> {
+  async getNonce(walletAddress: string, chain: "base" | "base" = "base"): Promise<NonceResponse> {
     try {
       const response = await fetch(`${API_BASE_URL}/api/auth/nonce`, {
         method: "POST",
@@ -138,7 +138,7 @@ class AuthService {
   }
 
   /**
-   * Sign a message with Solana wallet (returns base58 signature)
+   * Sign a message with Base wallet (returns base58 signature)
    */
   async signMessageSolana(wallet: WalletAdapter, message: string): Promise<string> {
     if (!wallet.signMessage) {
@@ -175,7 +175,7 @@ class AuthService {
     walletAddress: string,
     signature: string,
     nonce: string,
-    chain: "solana" | "base" = "base"
+    chain: "base" | "base" = "base"
   ): Promise<VerifyResponse> {
     try {
       const response = await fetch(`${API_BASE_URL}/api/auth/verify`, {
@@ -318,10 +318,10 @@ class AuthService {
 
 export const authService = new AuthService();
 
-export const getNonce = (walletAddress: string, chain?: "solana" | "base") =>
+export const getNonce = (walletAddress: string, chain?: "base" | "base") =>
   authService.getNonce(walletAddress, chain);
 
-export const verifySignature = (walletAddress: string, signature: string, nonce: string, chain?: "solana" | "base") =>
+export const verifySignature = (walletAddress: string, signature: string, nonce: string, chain?: "base" | "base") =>
   authService.verifySignature(walletAddress, signature, nonce, chain);
 
 export const authenticate = (wallet: WalletAdapter) =>

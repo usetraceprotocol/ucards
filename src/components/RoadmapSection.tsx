@@ -15,7 +15,7 @@ const RoadmapSection = () => {
       quarter: "Q1 2026",
       icon: "ph:rocket-launch-bold",
       progress: 65,
-      description: "Launch of the USDP protocol on Base L2 with ZK Proof-powered smart contracts and developer SDKs.",
+      description: "Launch of the UCARD protocol on Ethereum with NFT-gated smart contracts and developer SDKs.",
       milestones: [
         { name: "Mainnet Deployment", done: true },
         { name: "Developer SDK Release", done: true },
@@ -29,7 +29,7 @@ const RoadmapSection = () => {
       quarter: "Q2 2026",
       icon: "ph:users-three-bold",
       progress: 0,
-      description: "Launch of the USDP Neobank with P2P payments and confidential savings.",
+      description: "Launch of the UCARD Neobank with P2P payments and confidential savings.",
       milestones: [
         { name: "Neobank App Launch", done: false },
         { name: "Partner Integrations", done: false },
@@ -53,11 +53,11 @@ const RoadmapSection = () => {
     {
       phase: "Phase 4",
       status: "UPCOMING",
-      title: "Web 4.0 Agentic Economy",
+      title: "Web 4.0 Membership Economy",
       quarter: "Q4 2026",
       icon: "ph:brain-bold",
       progress: 0,
-      description: "Deep AI integrations establishing USDP as the default privacy layer for Web4 — the autonomous, agent-driven internet economy.",
+      description: "Deep AI integrations establishing UCARD as the default privacy layer for Onchain — the autonomous, agent-driven internet economy.",
       milestones: [
         { name: "AI Agent SDK", done: false },
         { name: "Institutional Vaults", done: false },
@@ -89,7 +89,7 @@ const RoadmapSection = () => {
           >
           <h2 className="display-section font-serif text-foreground">
               Evolving the{" "}
-              <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Web4</em>
+              <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Onchain</em>
               <br />
               Privacy Landscape
             </h2>
@@ -101,7 +101,7 @@ const RoadmapSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <p className="text-base text-muted-foreground leading-relaxed">
-              Our roadmap for evolving the Web4 privacy landscape — from protocol launch to a fully autonomous agentic economy.
+              Our roadmap for evolving the onchain privacy landscape — from protocol launch to a fully autonomous membership economy.
             </p>
           </motion.div>
         </div>

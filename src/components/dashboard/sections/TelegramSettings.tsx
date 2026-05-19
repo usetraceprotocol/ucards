@@ -13,7 +13,7 @@ import {
   type TelegramLinkStatus,
 } from "@/services/telegram";
 
-const BOT_USERNAME = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || "baseusdp_bot";
+const BOT_USERNAME = import.meta.env.VITE_TELEGRAM_BOT_USERNAME || "unicard_bot";
 
 const TelegramSettings = () => {
   const { fullWalletAddress } = useWallet();
@@ -232,7 +232,7 @@ const TelegramSettings = () => {
                 onChange={(v) => apply("notify_outgoing", v)}
               />
               <ToggleRow
-                label="x402 settlements"
+                label="card-issuance settlements"
                 description="DM you when one of your payment links / requests is paid."
                 value={status.notify_x402}
                 busy={busyKey === "notify_x402"}

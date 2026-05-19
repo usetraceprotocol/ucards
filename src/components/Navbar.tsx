@@ -27,7 +27,7 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { name: "About USDP", href: "#about" },
+    { name: "About UCARD", href: "#about" },
     { name: "The Challenge", href: "#problem" },
     { name: "Our Solution", href: "#features" },
     { name: "Applications", href: "#use-cases" },
@@ -73,7 +73,7 @@ const Navbar = () => {
                }}
              />
            </motion.div>
-           <span className="text-sm font-semibold tracking-tighter text-foreground">BASEUSDP</span>
+           <span className="text-sm font-semibold tracking-tighter text-foreground">UNICARD</span>
          </Link>
 
         <div className="hidden md:flex items-center gap-9 text-sm text-muted-foreground font-normal">

@@ -1,7 +1,7 @@
 /**
  * Share Cast Button
  * Composes a privacy-safe Farcaster cast after a successful payment
- * Default text: "Sent a private payment via BASEUSDP" (no amount, no recipient)
+ * Default text: "Sent a private payment via UNICARD" (no amount, no recipient)
  * Uses dynamic import to avoid crashes outside Farcaster iframe
  */
 
@@ -15,7 +15,7 @@ interface ShareCastButtonProps {
 
 export function ShareCastButton({
   paymentId,
-  text = "Sent a private payment via BASEUSDP",
+  text = "Sent a private payment via UNICARD",
   className = "",
 }: ShareCastButtonProps) {
   const handleShare = async () => {
@@ -25,7 +25,7 @@ export function ShareCastButton({
       const embeds: string[] = [];
 
       if (paymentId) {
-        embeds.push(`https://baseusdp.com/miniapp/pay/${paymentId}`);
+        embeds.push(`https://unicard.com/miniapp/pay/${paymentId}`);
       }
 
       await sdk.actions.composeCast({

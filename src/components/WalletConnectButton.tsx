@@ -348,7 +348,7 @@ const WalletConnectButton = ({ variant = "navbar" }: WalletConnectButtonProps) =
         >
           <p className="text-sm font-semibold mb-1 text-center text-foreground">Connect Wallet</p>
           <p className="text-xs text-muted-foreground text-center mb-4">
-            Select a wallet to connect to USDP
+            Select a wallet to connect to UCARD
           </p>
 
           <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-1">

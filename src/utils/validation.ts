@@ -4,15 +4,15 @@
  */
 
 /**
- * Validate a Solana address (base58 format)
+ * Validate a Base address (base58 format)
  *
- * Solana addresses are:
+ * Base addresses are:
  * - Base58 encoded
  * - 32-44 characters long
  * - No ambiguous characters (0, O, I, l)
  *
  * @param address - Address to validate
- * @returns true if valid Solana address format
+ * @returns true if valid Base address format
  */
 export const isValidSolanaAddress = (address: string): boolean => {
   if (!address || typeof address !== "string") {
@@ -82,7 +82,7 @@ export const isValidPaymentId = (paymentId: string): boolean => {
 };
 
 /**
- * Validate a transaction signature (Solana or EVM format)
+ * Validate a transaction signature (Base or EVM format)
  *
  * @param signature - Transaction signature to validate
  * @returns true if valid signature format
@@ -95,7 +95,7 @@ export const isValidTransactionSignature = (signature: string): boolean => {
   if (signature.startsWith("0x")) {
     return /^0x[a-fA-F0-9]{64}$/.test(signature);
   }
-  // Solana transaction signatures are base58 encoded, typically 87-88 characters
+  // Base transaction signatures are base58 encoded, typically 87-88 characters
   const base58Regex = /^[1-9A-HJ-NP-Za-km-z]{80,90}$/;
   return base58Regex.test(signature);
 };
@@ -106,7 +106,7 @@ export const isValidTransactionSignature = (signature: string): boolean => {
  * @param address - Address to validate
  * @returns Error message or null if valid
  */
-export const getAddressError = (address: string, chain: "solana" | "base" = "base"): string | null => {
+export const getAddressError = (address: string, chain: "base" | "base" = "base"): string | null => {
   if (!address) {
     return "Address is required";
   }

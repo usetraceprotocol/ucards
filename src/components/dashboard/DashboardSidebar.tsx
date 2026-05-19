@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { cn } from "@/lib/utils";
-import usdpLogo from "@/assets/usdp-logo.png";
+import usdpLogo from "@/assets/opaq-logo.svg";
 
 interface DashboardSidebarProps {
   activeTab: string;
@@ -23,9 +23,9 @@ const DashboardSidebar = ({ activeTab, setActiveTab }: DashboardSidebarProps) =>
       <div className="p-6 border-b border-border">
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative">
-            <img src={usdpLogo} alt="USDP" className="w-9 h-9 rounded-lg object-contain" />
+            <img src={usdpLogo} alt="UCARD" className="w-9 h-9 rounded-lg object-contain" />
           </div>
-          <span className="font-display text-lg font-bold">USDP</span>
+          <span className="font-display text-lg font-bold">UCARD</span>
         </Link>
       </div>
 

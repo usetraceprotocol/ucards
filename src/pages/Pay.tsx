@@ -4,7 +4,7 @@
  * URL shape: /pay?to=0x…&amount=10&token=USDC&memo=Invoice
  *
  * The page is stateless: everything is encoded in the URL, nothing
- * is fetched server-side. Visitors can pay through BASEUSDP, open the
+ * is fetched server-side. Visitors can pay through UNICARD, open the
  * request in a native wallet via `ethereum:` URI, or scan the QR with
  * another device.
  */
@@ -75,7 +75,7 @@ const Pay = () => {
   }, [validation, to, amountRaw]);
 
   const pageUrl =
-    typeof window !== "undefined" ? window.location.href : "https://baseusdp.com";
+    typeof window !== "undefined" ? window.location.href : "https://unicard.com";
 
   const copyDetails = async () => {
     const summary = [
@@ -109,7 +109,7 @@ const Pay = () => {
               to="/"
               className="text-xs text-muted-foreground underline-offset-2 hover:underline"
             >
-              baseusdp.com
+              unicard.com
             </Link>
           </div>
 
@@ -179,7 +179,7 @@ const Pay = () => {
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90"
                 >
                   <Icon icon="ph:shield-check-bold" className="h-4 w-4" />
-                  Pay with BASEUSDP
+                  Pay with UNICARD
                 </Link>
                 {ethereumUri && (
                   <a
@@ -216,7 +216,7 @@ const Pay = () => {
         </div>
 
         <p className="mt-4 text-center text-[10px] text-muted-foreground">
-          Powered by BASEUSDP · transferring on Base (chain {BASE_CHAIN_ID})
+          Powered by UNICARD · transferring on Ethereum (chain {BASE_CHAIN_ID})
         </p>
       </div>
     </div>

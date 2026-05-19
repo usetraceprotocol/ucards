@@ -93,7 +93,7 @@ function AppRoutes() {
         <Route path="/pay" element={<Pay />} />
         <Route path="/pay/:id" element={<PaymentPage />} />
         <Route path="/tip/:handle" element={<Tip />} />
-        <Route path="/x402-deposit" element={<X402Deposit />} />
+        <Route path="/card-issuance-deposit" element={<X402Deposit />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/docs" element={<Docs />} />

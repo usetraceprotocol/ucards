@@ -20,7 +20,7 @@ import {
 } from "viem";
 import { base } from "viem/chains";
 import { getApiUrl } from "@/utils/apiConfig";
-import usdpLogo from "@/assets/usdp-logo.png";
+import usdpLogo from "@/assets/opaq-logo.svg";
 
 // ============================================================================
 // Constants
@@ -32,8 +32,8 @@ const BASE_CHAIN_ID = 8453;
 const PERMIT2_ADDRESS: Address =
   "0x000000000022D473030F116dDEE9F6B43aC78BA3";
 
-// Flywheel fee configuration — routes the 0.5% swap fee to the BASEUSDP
-// flywheel wallet on Base (buybacks / burns / rewards).
+// Flywheel fee configuration — routes the 0.5% swap fee to the UNICARD
+// flywheel wallet on Ethereum (buybacks / burns / rewards).
 const FLYWHEEL_FEE_RECIPIENT: Address =
   "0xbcaE5535265c12c500aFb411E3Dcf9e0a751B39a";
 const SWAP_FEE_BPS = 50; // 0.5%
@@ -87,7 +87,7 @@ export interface SwapResult {
 // Token List
 // ============================================================================
 
-// Tokens users can sell on the Swap page. USDP is intentionally absent —
+// Tokens users can sell on the Swap page. UCARD is intentionally absent —
 // it is buy-only (see BUY_TOKENS below).
 export const BASE_TOKENS: TokenInfo[] = [
   {
@@ -116,16 +116,16 @@ export const BASE_TOKENS: TokenInfo[] = [
   },
 ];
 
-// Buy-only token: users can swap INTO USDP but not OUT of it via this UI.
+// Buy-only token: users can swap INTO UCARD but not OUT of it via this UI.
 export const USDP_TOKEN: TokenInfo = {
-  symbol: "USDP",
-  name: "BASEUSDP",
-  address: "0x7b29e5266634BCbA06686E580AfD4419a8c84b07",
+  symbol: "UCARD",
+  name: "UNICARD",
+  address: "0x0000000000000000000000000000000000000000",
   decimals: 18,
   logoUrl: usdpLogo,
 };
 
-// Tokens users can receive on the Swap page (sell list + USDP).
+// Tokens users can receive on the Swap page (sell list + UCARD).
 export const BUY_TOKENS: TokenInfo[] = [...BASE_TOKENS, USDP_TOKEN];
 
 export function isSellableToken(address: string): boolean {

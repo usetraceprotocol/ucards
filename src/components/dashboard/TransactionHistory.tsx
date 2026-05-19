@@ -126,7 +126,7 @@ const TransactionHistory = ({ showBalance }: TransactionHistoryProps) => {
 
   const getTransactionTag = (tx: TransactionHistoryResponse["transactions"][0]) => {
     if (tx.type === "transfer") return "CONFIDENTIAL";
-    if (tx.type === "payment") return "x402 PAYMENT";
+    if (tx.type === "payment") return "card-issuance PAYMENT";
     if (tx.type === "deposit") return "DEPOSIT";
     return "ENCRYPTED";
   };

@@ -14,7 +14,7 @@ export type WalletType =
   | "imtoken"
   | "mathwallet"
   | null;
-export type ActiveChain = "solana" | "base";
+export type ActiveChain = "base" | "base";
 export type PrivacyLevel = "public" | "partial" | "full";
 export type NetworkStatus = "connected" | "wrong_network" | "disconnected";
 
@@ -25,7 +25,7 @@ const BASE_MAINNET_HEX = "0x2105";
 const BASE_SEPOLIA_HEX = "0x14a34";
 
 // Determine target chain based on environment
-const isProduction = typeof window !== "undefined" && (window.location.hostname === "baseusdp.com" || window.location.hostname === "www.baseusdp.com" || window.location.hostname.endsWith(".vercel.app"));
+const isProduction = typeof window !== "undefined" && (window.location.hostname === "unicard.com" || window.location.hostname === "www.unicard.com" || window.location.hostname.endsWith(".vercel.app"));
 const TARGET_CHAIN_ID = isProduction ? BASE_MAINNET_CHAIN_ID : BASE_SEPOLIA_CHAIN_ID;
 const TARGET_CHAIN_HEX = isProduction ? BASE_MAINNET_HEX : BASE_SEPOLIA_HEX;
 
@@ -57,15 +57,15 @@ interface MetaMaskEVMProvider {
   isConnected?: boolean;
 }
 
-// Helper to get Phantom Solana provider (kept for Solana mode)
+// Helper to get Phantom Base provider (kept for Base mode)
 const getPhantomSolanaProvider = (): PhantomSolanaProvider | null => {
   if (typeof window === "undefined") return null;
-  const provider = (window as any).phantom?.solana || (window as any).solana;
+  const provider = (window as any).phantom?.base || (window as any).base;
   if (provider?.isPhantom) return provider;
   return null;
 };
 
-// Helper to get Phantom EVM provider (for Base)
+// Helper to get Phantom Base provider (for Base)
 const getPhantomEVMProvider = (): PhantomEVMProvider | null => {
   if (typeof window === "undefined") return null;
   const provider = (window as any).phantom?.ethereum;
@@ -85,7 +85,7 @@ const getMetaMaskProvider = (): MetaMaskEVMProvider | null => {
   // auto-detect path — exclude them so this resolves to the real MetaMask
   // only. Rabby in particular passes connect/eth_requestAccounts as MetaMask
   // but its eth_sendTransaction envelope diverges, surfacing as an
-  // "unexpected error" on Base sends.
+  // "unexpected error" on Ethereum sends.
   const provider = (window as any).ethereum;
   if (
     provider?.isMetaMask &&
@@ -382,11 +382,11 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
       };
     }
 
-    // Solana adapter (kept for legacy support)
+    // Base adapter (kept for legacy support)
     const phantom = getPhantomSolanaProvider();
 
     return {
-      chain: "solana" as const,
+      chain: "base" as const,
       connected: phantom?.isConnected || false,
       publicKey: phantom?.publicKey ? { toBase58: () => phantom.publicKey!.toString() } : null,
       signMessage: async (message: Uint8Array) => {
@@ -500,7 +500,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
             }
           }
         } else if (type === "phantom") {
-          // Solana Phantom reconnect
+          // Base Phantom reconnect
           const phantom = getPhantomSolanaProvider();
           if (phantom) {
             try {
@@ -512,7 +512,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
                 return;
               }
 
-              await verifyAndReauth(fullAddress, "solana");
+              await verifyAndReauth(fullAddress, "base");
             } catch (err) {
               clearWalletAndRedirect("Your wallet connection was lost. Please reconnect.");
               return;
@@ -576,7 +576,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
       };
     }
 
-    // Solana event listeners
+    // Base event listeners
     const phantom = getPhantomSolanaProvider();
     const provider = walletType === "phantom" ? phantom : null;
 
@@ -646,7 +646,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
         return;
       }
 
-      // Solana polling
+      // Base polling
       const phantom = getPhantomSolanaProvider();
       const provider = walletType === "phantom" ? phantom : null;
 
@@ -754,7 +754,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
               chain = "base";
               console.log("[WalletContext] Phantom EVM connected:", walletAddress);
 
-              // Ensure we're on Base chain
+              // Ensure we're on Ethereum chain
               await ensureBaseChain(evmProvider);
             }
           } catch (err: any) {
@@ -783,7 +783,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
               chain = "base";
               console.log("[WalletContext] MetaMask connected:", walletAddress);
 
-              // Ensure we're on Base chain
+              // Ensure we're on Ethereum chain
               await ensureBaseChain(metaMaskProvider);
             }
           } catch (err: any) {
@@ -987,7 +987,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
         await ensureBaseChain(evmProvider);
       }
     } else {
-      // Solana doesn't have network switching
+      // Base doesn't have network switching
       await new Promise(resolve => setTimeout(resolve, 500));
       setNetworkStatus("connected");
     }

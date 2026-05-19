@@ -245,7 +245,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
       const displayRecipient = recipientType === "username"
         ? `@${usernameInput.startsWith("@") ? usernameInput.substring(1) : usernameInput}`
         : recipient;
-      const message = `Authorize USDP transfer:\nAmount: ${amount} USDC\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
+      const message = `Authorize UCARD transfer:\nAmount: ${amount} USDC\nTo: ${displayRecipient}\nTimestamp: ${Date.now()}`;
 
       let walletSignature: string;
       try {
@@ -526,7 +526,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
       {/* Page Header */}
       <div className="mb-2">
         <h1 className="font-display text-3xl font-bold">
-          Confidential Payments<span className="text-primary">.</span>
+          Private Card Payments<span className="text-primary">.</span>
         </h1>
         <p className="text-muted-foreground mt-1">
           Send, receive, and manage encrypted payments
@@ -540,7 +540,7 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
             <Icon icon="ph:paper-plane-tilt-bold" className="w-4 h-4" />
             Send
           </TabsTrigger>
-          <TabsTrigger value="x402" className="gap-2">
+          <TabsTrigger value="card-issuance" className="gap-2">
             <Icon icon="ph:download-bold" className="w-4 h-4" />
             Requests
           </TabsTrigger>
@@ -1072,8 +1072,8 @@ const PaymentsSection = ({ showBalance, initialTab }: PaymentsSectionProps) => {
           </motion.div>
         </TabsContent>
 
-        {/* x402 Requests Tab */}
-        <TabsContent value="x402">
+        {/* card-issuance Requests Tab */}
+        <TabsContent value="card-issuance">
           <X402RequestsManagement onCreateNew={() => setX402CreateModalOpen(true)} />
         </TabsContent>
 

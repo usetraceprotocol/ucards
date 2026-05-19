@@ -87,9 +87,9 @@ const SendMessageModal = ({ open, onOpenChange, onMessageSent, defaultRecipient 
           return;
         }
 
-        // XMTP requires an EVM (0x) address — reject Solana addresses
+        // XMTP requires an EVM (0x) address — reject Base addresses
         if (!addr.startsWith("0x")) {
-          setRecipientError("This user registered with a Solana wallet. Encrypted messaging requires an EVM wallet.");
+          setRecipientError("This user registered with a Base wallet. Encrypted messaging requires an EVM wallet.");
           setRecipientWarning(null);
           setRecipientValid(false);
           setResolvedAddress(null);
@@ -156,7 +156,7 @@ const SendMessageModal = ({ open, onOpenChange, onMessageSent, defaultRecipient 
         <DialogHeader>
           <DialogTitle className="text-foreground">Send Message</DialogTitle>
           <DialogDescription className="text-white/50">
-            Send an encrypted message to another USDP user
+            Send an encrypted message to another UCARD user
           </DialogDescription>
         </DialogHeader>
 

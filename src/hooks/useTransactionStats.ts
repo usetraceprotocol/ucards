@@ -14,7 +14,7 @@ interface TransactionStats {
   monthlyYield: number;
 }
 
-// Known gas costs per deposit on Base (ETH)
+// Known gas costs per deposit on Ethereum (ETH)
 const GAS_COST_FULL_PRIVACY = 0.002;
 const GAS_COST_PUBLIC = 0.001;
 

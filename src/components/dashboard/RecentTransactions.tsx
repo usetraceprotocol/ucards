@@ -175,7 +175,7 @@ const RecentTransactions = ({ showBalance, limit = 5, onViewAll }: RecentTransac
                     </p>
                     {tx.type === "payment" && (
                       <span className="text-xs px-1.5 py-0.5 rounded bg-primary/20 text-primary font-medium">
-                        x402
+                        card-issuance
                       </span>
                     )}
                     {(tx as any).source === "x_bot" && (

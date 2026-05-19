@@ -60,7 +60,7 @@ const WalletConnectPrompt = () => {
                   Connect Your Wallet
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Connect your wallet to access the USDP Terminal.
+                  Connect your wallet to access the UCARD Terminal.
                   Experience encrypted balances, confidential payments, and privacy-first
                   financial tools.
                 </p>
@@ -108,7 +108,7 @@ const WalletConnectPrompt = () => {
                   Select Wallet
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Choose a wallet to connect to USDP
+                  Choose a wallet to connect to UCARD
                 </p>
               </div>
 

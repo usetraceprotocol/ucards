@@ -10,7 +10,7 @@ const solutions = [
   {
     icon: "ph:lightning-fill",
     title: "Internet-Native Payments",
-    tag: "x402 Standard",
+    tag: "Card Rails",
     description: "An open, neutral standard that activates HTTP 402. Any website, app, or API can request payment instantly.",
     features: ["Agent-to-agent transactions", "Micropayments (sub-cent)", "Usage-based billing"],
     featured: false,
@@ -19,8 +19,8 @@ const solutions = [
   {
     icon: "ph:shield-check-fill",
     title: "Prove Without Revealing",
-    tag: "ZK Proof Technology",
-    description: "Zero-Knowledge Proofs allow verification of transactions without revealing sensitive data.",
+    tag: "Encrypted Issuance",
+    description: "private virtual cards allow verification of transactions without revealing sensitive data.",
     features: ["Confidential balances", "Private transactions", "Anonymous payments"],
     featured: true,
     illustration: "zk",
@@ -59,7 +59,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <h2 className="display-section font-serif text-foreground">
-            How USDP delivers{" "}
+            How UCARD delivers{" "}
             <em className="gradient-text" style={{ background: 'var(--gradient-beam)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>unparalleled confidentiality</em>
           </h2>
         </motion.div>
@@ -70,7 +70,7 @@ const SolutionSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-base text-muted-foreground leading-relaxed">
-            Three revolutionary technologies combined to power the Web4 agentic economy with unparalleled privacy.
+            Three revolutionary technologies combined to power the onchain card economy with unparalleled privacy.
           </p>
         </motion.div>
       </div>
@@ -141,9 +141,9 @@ const SolutionSection = () => {
           </p>
           <div className="grid grid-cols-2 gap-3">
             {[
-              { icon: "simple-icons:coinbase", name: "Base L2" },
-              { icon: "ph:shield-check-fill", name: "ZK Proofs" },
-              { icon: "ph:currency-dollar-fill", name: "x402" },
+              { icon: "simple-icons:coinbase", name: "Base" },
+              { icon: "ph:shield-check-fill", name: "Virtual Card Proofs" },
+              { icon: "ph:currency-dollar-fill", name: "card-issuance" },
               { icon: "simple-icons:solidity", name: "Solidity" },
               { icon: "ph:robot-fill", name: "AI Agents" },
               { icon: "ph:lock-fill", name: "ERC-20" },

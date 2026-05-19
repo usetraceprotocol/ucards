@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { motion, useTransform, useSpring, useMotionValue } from "framer-motion";
-import usdpLogo from "@/assets/usdp-logo.png";
-import usdpLogoWhite from "@/assets/usdp-logo-white.png";
+import usdpLogo from "@/assets/opaq-logo.svg";
+import usdpLogoWhite from "@/assets/opaq-logo-white.svg";
 import { useTheme } from "@/contexts/ThemeContext";
 import {
   Shield, Lock, Fingerprint, Eye, KeyRound, FileKey,
@@ -14,7 +14,7 @@ import {
 // --- Types ---
 export type AnimationPhase = "scatter" | "line" | "circle" | "bottom-strip";
 
-const CA_ADDRESS = "0x7b29e5266634bcba06686e580afd4419a8c84b07";
+const CA_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const CARD_ICONS = [
   Shield, Lock, Fingerprint, Eye, KeyRound, FileKey,
@@ -461,7 +461,7 @@ export default function ScrollMorphHero() {
         >
           <motion.img
             src={theme === "dark" ? usdpLogoWhite : usdpLogo}
-            alt="USDP"
+            alt="UCARD"
             className="pointer-events-none max-w-[30%] sm:max-w-[clamp(120px,30vw,320px)]"
             style={{
               width: 'clamp(60px, 18vw, 320px)',
@@ -515,18 +515,18 @@ export default function ScrollMorphHero() {
              >by Design</em>
           </h2>
            <p className="mt-6 text-sm leading-relaxed max-w-md text-center text-muted-foreground">
-             At the heart of USDP is a protocol engineered for the new internet. We combine Zero-Knowledge cryptography with the x402 payment standard to deliver a truly confidential transaction layer for the autonomous economy on Base.
+             UNICARD is the membership-gated virtual card layer for Ethereum. Hold $UCARD, mint your card NFT, and spin up private virtual cards backed by stablecoins. Spend online without leaking your wallet — every checkout looks like a normal card payment.
            </p>
            <div className="pointer-events-auto mt-8 relative group">
              <div
                className="absolute -inset-[1.5px] rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 blur-[1px]"
                style={{
-                 background: 'linear-gradient(135deg, hsl(270 80% 65%), hsl(320 80% 60%), hsl(30 90% 60%), hsl(50 95% 55%), hsl(80 90% 55%))',
+                 background: 'linear-gradient(135deg, hsl(170 75% 60%), hsl(180 80% 55%), hsl(190 85% 60%), hsl(200 85% 65%), hsl(220 80% 70%))',
                }}
              />
              <a
                href="/dashboard"
-               className="relative inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold tracking-wide bg-background text-foreground transition-all duration-300 hover:shadow-[0_0_25px_-5px_hsl(270_80%_65%_/_0.5)]"
+               className="relative inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold tracking-wide bg-background text-foreground transition-all duration-300 hover:shadow-[0_0_25px_-5px_hsl(190_85%_60%_/_0.5)]"
              >
                Start Now
                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>

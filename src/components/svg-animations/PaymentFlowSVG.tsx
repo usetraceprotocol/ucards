@@ -57,14 +57,14 @@ const PaymentFlowSVG = ({ inverted = false }: { inverted?: boolean }) => {
         />
       </motion.g>
 
-      {/* Center x402 badge */}
+      {/* Center card-issuance badge */}
       <motion.g
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6, type: "spring" }}
       >
         <rect x="130" y="78" width="60" height="28" rx="14" fill={fg} />
-        <text x="160" y="96" textAnchor="middle" fill={inverted ? "hsl(0 0% 0%)" : "hsl(0 0% 100%)"} fontSize="10" fontWeight="700" fontFamily="monospace">x402</text>
+        <text x="160" y="96" textAnchor="middle" fill={inverted ? "hsl(0 0% 0%)" : "hsl(0 0% 100%)"} fontSize="10" fontWeight="700" fontFamily="monospace">card-issuance</text>
       </motion.g>
 
       {/* Animated payment line left to center */}

@@ -54,7 +54,7 @@ const SmsSection = () => {
           }}
         >
           <Icon icon="ph:wallet-bold" className="mt-0.5 h-4 w-4 shrink-0" />
-          Connect a wallet on Base to generate a claim link.
+          Connect a wallet on Ethereum to generate a claim link.
         </div>
       )}
 
@@ -86,7 +86,7 @@ const SmsSection = () => {
           <li>
             USDC is locked in the on-chain <code className="font-mono">
               SMSEscrow
-            </code> contract on Base, keyed by a random 32-byte token.
+            </code> contract on Ethereum, keyed by a random 32-byte token.
           </li>
           <li>
             You share the resulting link with the recipient over any channel
